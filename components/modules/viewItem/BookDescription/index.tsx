@@ -1,96 +1,47 @@
 import clsx from 'clsx';
 import React from 'react';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Keyboard } from 'swiper';
-
-import { BookProps } from '@/components/elements/Book';
-import GlobalSvgSelector from '@/components/GlobalSvgSelector';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import s from './BookDescription.module.scss';
-import { advertisingData } from '@/utils/advertisingData';
 import Link from 'next/link';
-import Image from 'next/image';
-import Button from '@/components/elements/Button';
 
 type Props = {};
 
 const BoookDescription = (props: Props) => {
   return (
-    <section className={clsx(s.section, 'section')}>
-      <div className="container">
-        <div className={s.wrapper}>
-          <div className={clsx(s.title, 'title-section')}>Новинки</div>
-          <div className={s.content}>
-            <Swiper
-              className={s.slider}
-              spaceBetween={30}
-              slidesPerView={1}
-              speed={1000}
-              navigation={{
-                nextEl: '.arrow-next-adv',
-                prevEl: '.arrow-prev-adv',
-              }}
-              pagination={{
-                el: '.slider-pagination-adv',
-                clickable: true,
-              }}
-              keyboard={true}
-              modules={[Navigation, Pagination, Keyboard]}>
-              {advertisingData &&
-                advertisingData.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <AdvertisingBook {...item} />
-                  </SwiperSlide>
-                ))}
-
-              <div className={s.slider__wrapper}>
-                <div className={clsx(s.arrow, 'arrow', 'arrow-prev-adv')}>
-                  <div className="arrow__icon icon">
-                    <GlobalSvgSelector id="chevron_prev" />
-                  </div>
-                </div>
-                <div
-                  className={clsx(
-                    s.pagination,
-                    'slider-pagination',
-                    'slider-pagination-adv',
-                  )}></div>
-                <div className={clsx(s.arrow, 'arrow', 'arrow-next-adv')}>
-                  <div className="arrow__icon icon">
-                    <GlobalSvgSelector id="chevron_next" />
-                  </div>
-                </div>
-              </div>
-            </Swiper>
+      <section className={clsx(s.section, 'section')}>
+        <div className="container">
+          <div className={s.wrapper}>
+            <div className={s.text}>
+              <h2 className={s.title}>Опис книги</h2>
+              <p>
+                Вітання. Добро пожалувати в систему перекладів «UA Translate». Цей сайт призначений для професійних мов любительських перекладів будь-яких новелів, фанфіків, ранобе з різних мов. Ваші улюблені ранобе, новели та інше на українській мові!
+              </p>
+              <p>
+                До ваших послуг: коментування перекладів та їх фрагментів, різноманітна статистика.
+                Також ви можете оцінювати як саму роботу, так і якість перекладу. При бажанні ви
+                можете купити у перекладача/автора розділи за які встановлення ціна, тим самим
+                допомагаючи та мотивуючи автора/перекладача.
+              </p>
+              <p>
+                Після реєстрації, подаєте заявку на схвалення перекладу (Кнопка: Створити переклад).
+                Після схвалення модератором публікуєте розділи перекладу, зробленого вами з іншої
+                мови.
+              </p>
+              <p>
+                Перекладач створює переклад, публікує, та встановлює розділи або публічного доступу,
+                або платними, доступними за підпискою, які можуть придбати нетерплячі користувачі!
+                Перекладач може сам встановити ціну на кожен проект (або взагалі виставити
+                безкоштовно), що перекладається. Це гарна мотивація для перекладача, а також швидкий
+                переклад для читачів! Звичайно платно робити не обов’язково, це все на ваш вибір!
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
 
 export default BoookDescription;
-
-const AdvertisingBook = ({ image, link, title, author, description }: BookProps) => {
-  return (
-    <div className={s.book}>
-      <div className={s.body}>
-        <div className={s.inner}>
-          {author && <div className={s.author}>{author}</div>}
-          <div className={s.label}>{title}</div>
-          {description && <div className={s.description}>{description}</div>}
-          <Button className={s.button} variant="white">
-            Дивитися переклад
-          </Button>
-        </div>
-      </div>
-      <Link className={s.image__link} href={link}>
-        <Image className={s.image} src={image} width={402} height={573} alt={title} />
-      </Link>
-    </div>
-  );
-};
