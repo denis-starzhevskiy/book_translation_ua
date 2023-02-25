@@ -1,0 +1,16 @@
+:root {
+  --max-width: 71.875rem;
+  --font-inter: 'Inter', sans-serif, monospace;
+
+  --color-white: #fff;
+  --color-black: #000;
+  --color-main: #1a1e29;
+  --color-dark: #5e626c;
+  --color-blue: #00eafd;
+  --color-light_grey: #a5acbd;
+  --color-yellow: #fded01;
+
+  @media (max-width: 991.98px) {
+    // --max-width: 27rem;
+  }
+}
