@@ -167,3 +167,54 @@ export const recommendationsTopData: BookProps[] = [
   },
   
 ];
+
+export const recommendationsByAuthorData: BookProps[] = [
+  {
+    id: 0,
+    image: image7,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+  {
+    id: 1,
+    image: image8,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+  {
+    id: 2,
+    image: image4,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+  {
+    id: 3,
+    image: image3,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+  {
+    id: 4,
+    image: image9,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+  {
+    id: 3,
+    image: image7,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+  {
+    id: 4,
+    image: image8,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+  {
+    id: 5,
+    image: image9,
+    title: `Переклад книги “Гаррі Поттер”`,
+    link: `/`,
+  },
+];

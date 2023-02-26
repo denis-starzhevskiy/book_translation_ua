@@ -10,15 +10,14 @@
   border-bottom: 0.0625rem solid var(--color-dark);
 }
 
-.button {
-  border: 1px solid #FFFFFF;
-  border-radius: 5px;
+.buttonContainer {
   display: flex;
-  align-items: center;
-  padding: 10px 15px;
-  gap: 10px;
-  background: transparent;
-  color: white
+  justify-content: flex-end;
+}
+
+.outlinedButton {
+  background: #282D3B;
+  border: none;
 }
 
 .rowContainer {
@@ -27,7 +26,11 @@
   align-items: center;
 
   @media(max-width: 900px) {
-    grid-template-columns: 1fr 2fr 5fr 2fr;
+    grid-template-columns: 0.8fr 1.3fr 5fr 2fr;
+  }
+
+  @media(max-width: 400px) {
+    grid-template-columns: 0.8fr 1.3fr 4fr 2fr;
   }
 
   //&.light {
@@ -71,6 +74,7 @@
 .rowItemContainer {
   height: 64px;
   padding: 0 10px;
+
   &:hover {
     background: #282D3B;
 
@@ -157,26 +161,29 @@
 }
 
 .tableHeaders {
-  color:var(--color-light_grey)
-}
+  color: var(--color-light_grey);
 
-.buttonContainer {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.outlinedButton {
-  background: #282D3B;
-  border: none;
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 }
 
 .actionContainer {
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    row-gap: 20px;
+  }
 }
 
 .downloadButtonsContainer {
   display: flex;
   column-gap: 20px;
+
+  @media (max-width: 900px) {
+    justify-content: space-around;
+  }
 }

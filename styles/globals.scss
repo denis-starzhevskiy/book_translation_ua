@@ -297,3 +297,32 @@ footer {
 
   margin: 0;
 }
+
+.button {
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+  gap: 10px;
+  background: transparent;
+  color: white;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+}
+
+.button:disabled{
+  color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+
+  &:hover {
+    background: transparent;
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
+  }
+}

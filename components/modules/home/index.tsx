@@ -16,8 +16,8 @@ const HomePage = (props: Props) => {
       <BooksSection title="Реклама" items={noveltyBlockData} countDesktopSlider={5} />
       <Advertising />
       <LatestUpdates />
-      <BooksSection title="Тренди" items={trandsBlockData} light />
-      <BooksSection title="ВипадковІ" items={randomBlockData} />
+      <BooksSection title="Тренди" items={trandsBlockData} light/>
+      <BooksSection title="ВипадковІ" items={randomBlockData} light/>
       <Recommendations />
       <TextSection />
     </>

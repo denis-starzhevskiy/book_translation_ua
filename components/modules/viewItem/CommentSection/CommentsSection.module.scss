@@ -16,6 +16,9 @@
   margin-top: 20px;
   padding: 20px 0;
   border-bottom: 0.0625rem solid var(--color-dark);
+  @media (max-width: 900px) {
+    grid-template-columns: 2fr 9fr;
+  }
 }
 
 .textContainer {

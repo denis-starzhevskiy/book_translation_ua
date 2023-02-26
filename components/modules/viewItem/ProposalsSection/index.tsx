@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import clsx from 'clsx';
 
 import 'swiper/css';
@@ -19,6 +19,8 @@ type Props = {
 };
 
 const ProposalsSection = ({items, light}: Props) => {
+    const [disableDownloadByOne, setDisabledDownloadByOne] = useState("disabled")
+
     return (
         <section className={clsx(s.section, 'section')}>
             <div className={"container"}>
@@ -41,18 +43,18 @@ const ProposalsSection = ({items, light}: Props) => {
                                 <p>{item.name}</p>
                                 <p className={s.activeBlock}>{item.active}</p>
                                 <div className={s.buttonContainer}>
-                                    <button className={clsx(s.button, s.outlinedButton)}>{bookIcon()}Читати</button>
+                                    <button className={clsx("button", s.outlinedButton)}>{bookIcon()}Читати</button>
                                 </div>
                             </div>
                             <div className={s.rowDivider}/>
                         </div>)
                     })}
                     <div className={s.actionContainer}>
-                    <button className={s.button}>{noticeIcon()}Підписка</button>
+                    <button className={"button"}>{noticeIcon()}Підписка</button>
                     <div className={s.downloadButtonsContainer}>
-                        <button className={s.button}>{downloadIcon()}.fb2</button>
-                        <button className={s.button}>{downloadIcon()}.docx</button>
-                        <button className={s.button}>{downloadIcon()}Завантажити одним файлом</button>
+                        <button className={"button"}>{downloadIcon()}.fb2</button>
+                        <button className={"button"}>{downloadIcon()}.docx</button>
+                        <button className={"button"} disabled={!!disableDownloadByOne}>{downloadIcon(!!disableDownloadByOne)}Завантажити одним файлом</button>
                     </div>
                 </div>
                 </div>
