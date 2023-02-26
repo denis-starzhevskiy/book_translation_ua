@@ -1,87 +1,56 @@
 import React from 'react';
 import clsx from 'clsx';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Keyboard, Autoplay } from 'swiper';
-
-import Book, { BookProps } from '@/components/elements/Book';
-import GlobalSvgSelector from '@/components/GlobalSvgSelector';
+import Image from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import s from './BooksSection.module.scss';
+import s from './CommentsSection.module.scss';
+
+import avatar from '../../../../public/images/avatar.svg'
+import GlobalSvgSelector from "@/components/GlobalSvgSelector";
+import {heartIcon} from "@/components/modules/viewItem/icons";
+
+export type CommentProps = {
+  username: string,
+  comment: string,
+  avatar: string | null
+  publicationData: string
+}
 
 type Props = {
-  items: BookProps[];
-  title: string;
+  items: CommentProps[];
   light?: boolean;
-  countDesktopSlider?: number;
 };
 
-const BooksSection = ({ items, title, light, countDesktopSlider }: Props) => {
+const CommentsSection = ({ items, light}: Props) => {
   return (
-    <section className={clsx(s.section, 'section', light && 'light')}>
+    <section className={clsx(s.section, 'section')}>
       <div className="container">
         <div className={s.wrapper}>
-          <h2 className={clsx(s.title, 'title-section')}>{title}</h2>
-          <div className={clsx(s.content, light && s.light)}>
-            <Swiper
-              className={s.slider}
-              spaceBetween={10}
-              slidesPerView={1.5}
-              speed={1000}
-              navigation={{
-                nextEl: '.arrow-next-books',
-                prevEl: '.arrow-prev-books',
-              }}
-              pagination={{
-                el: '.slider-pagination-books',
-                clickable: true,
-              }}
-              keyboard={true}
-              modules={[Navigation, Pagination, Keyboard, Autoplay]}
-              autoplay={{
-                delay: 3000,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                992: {
-                  slidesPerView: countDesktopSlider || 4,
-                  spaceBetween: 30,
-                },
-              }}>
-              {items &&
-                items.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <Book {...item} />
-                  </SwiperSlide>
-                ))}
-
-              <div className={s.slider__wrapper}>
-                <div className={clsx(s.arrow, 'arrow', 'arrow-prev-books')}>
-                  <div className="arrow__icon icon">
-                    <GlobalSvgSelector id="chevron_prev" />
-                  </div>
+          <h2 className={clsx(s.title, 'title-section')}>Коментарі</h2>
+          {items.map((item, idx) => {
+            return (<div key={idx} className={s.itemContainer}>
+              <div>
+                <Image src={avatar} alt={""} />
+              </div>
+              <div className={s.textContainer}>
+                <div style={{display: 'flex', columnGap: '20px', alignItems: 'center'}}>
+                  <p className={s.usernameTextDecoration}>{item.username}</p>
+                  <p className={clsx(s.greyTextDecoration, s.textItalic)}>{item.publicationData}</p>
                 </div>
-                <div
-                  className={clsx(
-                    s.pagination,
-                    'slider-pagination',
-                    'slider-pagination-books',
-                  )}></div>
-                <div className={clsx(s.arrow, 'arrow', 'arrow-next-books')}>
-                  <div className="arrow__icon icon">
-                    <GlobalSvgSelector id="chevron_next" />
-                  </div>
+                <p className={s.commentTextDecoration}>{item.comment}</p>
+                <div className={s.likeActionContainer}>
+                  <p className={s.greyTextDecoration}>Сподобався коментар?</p>
+                  {heartIcon()}
                 </div>
               </div>
-            </Swiper>
-          </div>
+            </div>
+            )})}
         </div>
       </div>
     </section>
   );
 };
 
-export default BooksSection;
+export default CommentsSection;
