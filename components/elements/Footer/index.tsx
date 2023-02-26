@@ -4,7 +4,6 @@ import React from 'react';
 import SocialFooter from '../SocialFooter';
 
 import logo from '../../../public/images/logo.png';
-import logoDev from '../../../public/images/logo_dev.svg';
 
 import s from './Footer.module.scss';
 import NavigationFooter from '../NavigationFooter';

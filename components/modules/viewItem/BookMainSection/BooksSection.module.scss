@@ -4,74 +4,75 @@
   }
 }
 
+.breadcrumbs {
+  color: #A5ACBD
+}
+
+.container {
+  display: flex;
+  justify-content: space-between
+}
+
 .title {
-  margin-bottom: 2.5rem;
-  padding-bottom: 1.25rem;
-  border-bottom: 0.0625rem solid var(--color-dark);
+  color: white
 }
 
-.content {
-  position: relative;
-  &.light {
-    &::before {
-      background: linear-gradient(90deg, rgba(40, 45, 59, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    }
-    &::after {
-      background: linear-gradient(-90deg, rgba(40, 45, 59, 1) 0%, rgba(255, 255, 255, 0) 100%);
-    }
-  }
-  &::before {
-    pointer-events: none;
-    position: absolute;
-    content: '';
-    z-index: 2;
-
-    top: 0;
-    left: -0.9375rem;
-    height: 100%;
-    width: 1.875rem;
-    background: linear-gradient(90deg, rgba(26, 30, 41, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  }
-  &::after {
-    pointer-events: none;
-    position: absolute;
-    content: '';
-    z-index: 2;
-
-    top: 0;
-    right: -0.9375rem;
-    height: 100%;
-    width: 1.875rem;
-    background: linear-gradient(-90deg, rgba(26, 30, 41, 1) 0%, rgba(255, 255, 255, 0) 100%);
-
-    @media (max-width: 991.98px) {
-      display: none;
-    }
-  }
+.tagsContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.slider {
-  padding: 2.5rem 0.9375rem;
+.tag {
+  border: 1px solid #A5ACBD;
+  border-radius: 5px;
+  padding: 5px;
+  color: #A5ACBD;
+  font-size: 14px;
+}
 
-  margin: -2.5rem -0.9375rem;
+.table {
+  margin-bottom: 52px;
+  width: 445px;
+  border-collapse: collapse;
+}
 
-  &__wrapper {
-    margin-top: 2.5rem;
+.th {
+  color: #A5ACBD;
+  font-weight: 400;
+  text-align: left;
+  width: 190px;
+}
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.td {
+  color: white;
+}
 
-    gap: 1rem;
+.commonTdTh {
+  border-bottom: 1px solid #A5ACBD;
+  padding: 10px 0;
+}
 
-    @media (max-width: 991.98px) {
-      margin-top: 1.875rem;
-    }
-  }
+.button {
+  border: 1px solid #FFFFFF;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  gap: 10px;
+  background: transparent;
+  color: white
+}
 
-  @media (max-width: 991.98px) {
-    padding: 2.5rem 0.9375rem;
-    margin: -2.5rem -0.9375rem;
-    width: calc(100% + 2.1875rem);
-  }
+.actions {
+  display: flex;
+  gap: 35px
+}
+
+.sub-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #FFFFFF;
 }
