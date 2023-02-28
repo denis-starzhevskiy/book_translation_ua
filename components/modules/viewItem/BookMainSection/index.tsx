@@ -36,7 +36,7 @@ const BooksSection = (book: BookProps) => {
     return (
         <section className={clsx(s.section, 'section')}>
             <div className="container">
-                <BreadCrumbs path={["Головна", "Перегляд книги"]}/>
+                <BreadCrumbs path={[{title: "Головна", link: "/"}, {title: "Перегляд книги", link: "/books/543543"}]}/>
                 <h2 className={s.title}>{book.title}</h2>
                 <div className={s.container}>
                     <Image src={book.image} alt={"title"}/>

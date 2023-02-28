@@ -3,11 +3,11 @@ import BookDescription from "@/components/modules/viewItem/BookDescription";
 import BookMainSection from "@/components/modules/viewItem/BookMainSection";
 import ProposalsSection from "@/components/modules/viewItem/ProposalsSection";
 import CommentSection from "@/components/modules/viewItem/CommentSection";
-import BooksSection from "@/components/modules/home/BooksSection";
 import {proposalsBlockData} from "@/utils/proposalsBlockData";
 import {commentsBlockData} from "@/utils/commentsBlockData";
 import {recommendationsByAuthorData} from "@/utils/recommendationsBooksData";
 import {bookInformation} from "@/utils/bookInformation";
+import BooksSection from "@/components/modules/viewItem/BooksSection";
 
 type Props = {};
 
@@ -16,7 +16,7 @@ const ViewItemPage = (props: Props) => {
         <>
             <BookMainSection {...bookInformation}/>
             <BookDescription/>
-            <BooksSection title="Інші роботи автора" items={recommendationsByAuthorData} light countDesktopSlider={6}/>
+            <BooksSection title="Інші роботи автора" items={recommendationsByAuthorData} light/>
             <ProposalsSection items={proposalsBlockData}/>
             <CommentSection items={commentsBlockData}/>
         </>

@@ -11,6 +11,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import s from './BooksSection.module.scss';
+import Link from "next/link";
+import Image from "next/image";
 
 type Props = {
   items: BookProps[];
@@ -29,7 +31,7 @@ const BooksSection = ({ items, title, light, countDesktopSlider }: Props) => {
             <Swiper
               className={s.slider}
               spaceBetween={10}
-              slidesPerView={1.5}
+              slidesPerView={1}
               speed={1000}
               navigation={{
                 nextEl: '.arrow-next-books',
@@ -46,15 +48,36 @@ const BooksSection = ({ items, title, light, countDesktopSlider }: Props) => {
                 disableOnInteraction: false,
               }}
               breakpoints={{
-                992: {
-                  slidesPerView: countDesktopSlider || 4,
+                600: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+                800: {
+                  slidesPerView: 4,
+                  spaceBetween: 30,
+                },
+                1024: {
+                  slidesPerView: 6,
                   spaceBetween: 30,
                 },
               }}>
               {items &&
                 items.map((item) => (
                   <SwiperSlide key={item.id}>
-                    <Book {...item} />
+                    <div className={"book"}>
+                      <div className={"head"}>
+                        {item.status && <div className={s.status}>{item.status}</div>}
+
+                        <Link href={item.link} className={"iresponsive"}>
+                          <Image className={"image"} src={item.image} alt={item.title} />
+                        </Link>
+                      </div>
+                      <div className={"body"}>
+                        <Link href={item.link} className={s.bookTitle}>
+                          {item.title}
+                        </Link>
+                      </div>
+                    </div>
                   </SwiperSlide>
                 ))}
 

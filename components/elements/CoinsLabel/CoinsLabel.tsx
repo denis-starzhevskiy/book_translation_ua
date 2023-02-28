@@ -5,12 +5,9 @@ import s from "./Coins.module.scss"
 const CoinsLabel = ({coins}: {coins: number}) => {
     return (
         <div className={s.coinsContainer}>
-            <div style={{
-                color: '#FDED01', fontWeight: 600,
-                fontSize: 44
-            }}>{coins}
+            <div className={s.coinsNumberLabel}>{coins}
             </div>
-            <div style={{color: 'white'}}>UAcoins</div>
+            <div className={s.labelColor}>UAcoins</div>
         </div>
     );
 };

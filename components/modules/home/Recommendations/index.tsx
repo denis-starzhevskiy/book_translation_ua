@@ -84,7 +84,7 @@ const Recommendations = (props: Props) => {
                         }}>
                         {data.data.map((item) => (
                           <SwiperSlide key={item.id}>
-                            <Book {...item} />
+                            <Book {...item}/>
                           </SwiperSlide>
                         ))}
                         <div className={s.slider__wrapper}>
