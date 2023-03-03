@@ -57,7 +57,7 @@ const Advertising = (props: Props) => {
                   className={clsx(
                     s.pagination,
                     'slider-pagination',
-                    'slider-pagination-adv',
+                    'slider-pagination-adv'
                   )}></div>
                 <div className={clsx(s.arrow, 'arrow', 'arrow-next-adv')}>
                   <div className="arrow__icon icon">

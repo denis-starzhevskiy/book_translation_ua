@@ -1,25 +1,22 @@
-import React from "react"
+import React from 'react';
 
-export const useMediaQuery = (width: string) =>
-{
-  const [targetReached, setTargetReached] = React.useState(false)
+export const useMediaQuery = (width: string) => {
+  const [targetReached, setTargetReached] = React.useState(false);
 
-  const updateTarget = React.useCallback((e: any) =>
-  {
-    if (e.matches) setTargetReached(true)
-    else setTargetReached(false)
-  }, [])
+  const updateTarget = React.useCallback((e: any) => {
+    if (e.matches) setTargetReached(true);
+    else setTargetReached(false);
+  }, []);
 
-  React.useEffect(() =>
-  {
-    const media = window.matchMedia(`(max-width: ${width}px)`)
-    media.addEventListener('change', updateTarget)
+  React.useEffect(() => {
+    const media = window.matchMedia(`(max-width: ${width}px)`);
+    media.addEventListener('change', updateTarget);
 
     // Check on mount (callback is not called until a change occurs)
-    if (media.matches) setTargetReached(true)
+    if (media.matches) setTargetReached(true);
 
-    return () => media.removeEventListener('change', updateTarget)
-  }, [])
+    return () => media.removeEventListener('change', updateTarget);
+  }, []);
 
-  return targetReached
-}
+  return targetReached;
+};

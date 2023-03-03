@@ -17,7 +17,7 @@ const Search = ({ label, placeholder, required, icon }: Props) => {
 
   const debouncedOnChange = React.useCallback(
     debounce((str: string) => setValue(str), 200),
-    [],
+    []
   );
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {

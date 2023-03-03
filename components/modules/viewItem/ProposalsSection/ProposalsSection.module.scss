@@ -16,7 +16,7 @@
 }
 
 .outlinedButton {
-  background: #282D3B;
+  background: #282d3b;
   border: none;
 }
 
@@ -25,11 +25,11 @@
   grid-template-columns: 1fr 1.5fr 6fr 2fr 2fr;
   align-items: center;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     grid-template-columns: 0.8fr 1.3fr 5fr 2fr;
   }
 
-  @media(max-width: 400px) {
+  @media (max-width: 400px) {
     grid-template-columns: 0.8fr 1.3fr 4fr 2fr;
   }
 
@@ -76,7 +76,7 @@
   padding: 0 10px;
 
   &:hover {
-    background: #282D3B;
+    background: #282d3b;
 
     button {
       background-color: var(--color-main);
@@ -133,7 +133,7 @@
 }
 
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }

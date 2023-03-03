@@ -1,12 +1,9 @@
-
 import { BookProps } from '@/components/elements/Book';
 
 import image from '../public/images/books/image.png';
 import image2 from '../public/images/books/image2.png';
 import image3 from '../public/images/books/image3.png';
 import image4 from '../public/images/books/image4.png';
-
-
 
 export const advertisingData: BookProps[] = [
   {
@@ -41,5 +38,4 @@ export const advertisingData: BookProps[] = [
     author: `Роман Віктюк`,
     link: `/`,
   },
- 
 ];

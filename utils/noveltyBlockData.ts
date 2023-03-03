@@ -7,7 +7,6 @@ import image4 from '../public/images/books/image4.png';
 import image5 from '../public/images/books/image5.png';
 import image6 from '../public/images/books/image6.png';
 
-
 export const noveltyBlockData: BookProps[] = [
   {
     id: 0,

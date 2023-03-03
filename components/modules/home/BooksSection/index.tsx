@@ -68,7 +68,7 @@ const BooksSection = ({ items, title, light, countDesktopSlider }: Props) => {
                   className={clsx(
                     s.pagination,
                     'slider-pagination',
-                    'slider-pagination-books',
+                    'slider-pagination-books'
                   )}></div>
                 <div className={clsx(s.arrow, 'arrow', 'arrow-next-books')}>
                   <div className="arrow__icon icon">

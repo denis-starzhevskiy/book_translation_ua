@@ -7,7 +7,6 @@ import image4 from '../public/images/books/image4.png';
 import image5 from '../public/images/books/image5.png';
 import image6 from '../public/images/books/image6.png';
 
-
 export const latestUpdatesData: BookProps[] = [
   {
     id: 0,
@@ -35,7 +34,7 @@ export const latestUpdatesData: BookProps[] = [
         link: '/',
         label: '#гарри поттер',
       },
-    ]
+    ],
   },
   {
     id: 1,
@@ -63,7 +62,7 @@ export const latestUpdatesData: BookProps[] = [
         link: '/',
         label: '#гарри поттер',
       },
-    ]
+    ],
   },
   {
     id: 2,
@@ -91,7 +90,7 @@ export const latestUpdatesData: BookProps[] = [
         link: '/',
         label: '#гарри поттер',
       },
-    ]
+    ],
   },
   {
     id: 3,
@@ -119,7 +118,7 @@ export const latestUpdatesData: BookProps[] = [
         link: '/',
         label: '#гарри поттер',
       },
-    ]
+    ],
   },
   {
     id: 4,
@@ -147,7 +146,7 @@ export const latestUpdatesData: BookProps[] = [
         link: '/',
         label: '#гарри поттер',
       },
-    ]
+    ],
   },
   {
     id: 5,
@@ -175,6 +174,6 @@ export const latestUpdatesData: BookProps[] = [
         link: '/',
         label: '#гарри поттер',
       },
-    ]
+    ],
   },
 ];

@@ -7,7 +7,6 @@ import image7 from '../public/images/books/image7.png';
 import image8 from '../public/images/books/image8.png';
 import image9 from '../public/images/books/image9.png';
 
-
 export const trandsBlockData: BookProps[] = [
   {
     id: 0,
