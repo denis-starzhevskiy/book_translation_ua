@@ -8,8 +8,7 @@ import 'swiper/css/navigation';
 import s from './CommentsSection.module.scss';
 
 import avatar from '../../../../public/images/avatar.svg'
-import GlobalSvgSelector from "@/components/GlobalSvgSelector";
-import {heartIcon} from "@/components/modules/viewItem/icons";
+import {heartIcon} from "@/components/modules/icons";
 
 export type CommentProps = {
   username: string,

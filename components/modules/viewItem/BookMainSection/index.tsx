@@ -5,11 +5,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import s from './BooksSection.module.scss';
 import Image from "next/image";
-import {bookIcon, bookMarkIcon} from "@/components/modules/viewItem/icons";
+import {bookIcon, bookMarkIcon} from "@/components/modules/icons";
 import {BreadCrumbs} from "@/components/elements/BreadCrumbs/BreadCrumbs";
 import {StarRating} from "@/components/elements/Rating/Rating";
 import CoinsLabel from "@/components/elements/CoinsLabel/CoinsLabel";
-import Link from "next/link";
 import BookInformationTable from "@/components/elements/BookInformationTable/BookInformationTable";
 
 export type BookProps = {

@@ -1,7 +1,7 @@
 import React from "react";
 
 import s from "./Rating.module.scss"
-import {starIcon} from "@/components/modules/viewItem/icons";
+import {starIcon} from "@/components/modules/icons";
 
 export const StarRating = ({rating}: {rating: number}) => {
     rating = rating < 0 ? 0 : rating > 5 ? 5 : rating;

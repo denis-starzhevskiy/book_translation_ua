@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import s from './ProposalsSection.module.scss';
-import {bookIcon, downloadIcon, noticeIcon} from "@/components/modules/viewItem/icons";
+import {bookIcon, downloadIcon, noticeIcon} from "@/components/modules/icons";
 
 export type ProposalProps = {
     name: string,
