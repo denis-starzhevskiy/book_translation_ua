@@ -11,8 +11,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import s from './BooksSection.module.scss';
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 type Props = {
   items: BookProps[];
@@ -64,15 +64,15 @@ const BooksSection = ({ items, title, light, countDesktopSlider }: Props) => {
               {items &&
                 items.map((item) => (
                   <SwiperSlide key={item.id}>
-                    <div className={"book"}>
-                      <div className={"head"}>
+                    <div className={'book'}>
+                      <div className={'head'}>
                         {item.status && <div className={s.status}>{item.status}</div>}
 
-                        <Link href={item.link} className={"iresponsive"}>
-                          <Image className={"image"} src={item.image} alt={item.title} />
+                        <Link href={item.link} className={'iresponsive'}>
+                          <Image className={'image'} src={item.image} alt={item.title} />
                         </Link>
                       </div>
-                      <div className={"body"}>
+                      <div className={'body'}>
                         <Link href={item.link} className={s.bookTitle}>
                           {item.title}
                         </Link>
@@ -91,7 +91,7 @@ const BooksSection = ({ items, title, light, countDesktopSlider }: Props) => {
                   className={clsx(
                     s.pagination,
                     'slider-pagination',
-                    'slider-pagination-books',
+                    'slider-pagination-books'
                   )}></div>
                 <div className={clsx(s.arrow, 'arrow', 'arrow-next-books')}>
                   <div className="arrow__icon icon">

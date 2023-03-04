@@ -1,5 +1,5 @@
-import ViewItemPage from "@/components/modules/viewItem";
+import ViewItemPage from '@/components/modules/viewItem';
 
 export default function Home() {
-    return <ViewItemPage />;
+  return <ViewItemPage />;
 }

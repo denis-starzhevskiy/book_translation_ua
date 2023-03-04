@@ -7,7 +7,6 @@ import image12 from '../public/images/books/image12.png';
 import image13 from '../public/images/books/image13.png';
 import image14 from '../public/images/books/image14.png';
 
-
 export const randomBlockData: BookProps[] = [
   {
     id: 0,

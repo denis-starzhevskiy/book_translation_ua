@@ -84,7 +84,7 @@ const Recommendations = (props: Props) => {
                         }}>
                         {data.data.map((item) => (
                           <SwiperSlide key={item.id}>
-                            <Book {...item}/>
+                            <Book {...item} />
                           </SwiperSlide>
                         ))}
                         <div className={s.slider__wrapper}>
@@ -97,7 +97,7 @@ const Recommendations = (props: Props) => {
                             className={clsx(
                               s.pagination,
                               'slider-pagination',
-                              'slider-pagination-books',
+                              'slider-pagination-books'
                             )}></div>
                           <div className={clsx(s.arrow, 'arrow', 'arrow-next-books')}>
                             <div className="arrow__icon icon">
