@@ -27,8 +27,13 @@
   text-align: left;
   width: 400px;
 
-  @media(max-width: 600px){
+  @media(max-width: 991.98px){
+    font-size: 14px;
+  }
+
+  @media (max-width: 600px) {
     text-align: center;
+    font-size: 14px;
   }
 }
 

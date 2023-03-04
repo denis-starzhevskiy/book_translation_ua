@@ -54,7 +54,7 @@ const CreateTranslation = () => {
     }
 
     return (
-        <section className={clsx(s.section, 'section')}>
+        <section className={clsx(s.section)}>
             <div className={clsx("container")}>
                 <div className={s.container}>
                     <div id={'header'}>

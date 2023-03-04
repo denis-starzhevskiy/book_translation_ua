@@ -29,9 +29,10 @@
 }
 
 .mobileTitle {
+  width: 100%;
   display: grid;
   grid-template-columns: 0.5fr 4fr;
-
+  justify-content: start;
 }
 
 .inputsContainer {
