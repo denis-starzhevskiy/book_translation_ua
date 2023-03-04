@@ -4,7 +4,7 @@ import PageTitle from '@/components/elements/PageTitle';
 import s from './bookmarks.module.scss';
 import { catalogData } from '@/utils/catalogData';
 import Book from '@/components/elements/Book';
-import { Layout } from '@/components/CatalogLayout';
+import CatalogLayout from '@/components/layouts/CatalogLayout';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Select from '@/components/elements/Select';
 
@@ -18,7 +18,7 @@ export default function BookmarksPage() {
         ]}
       />
       <PageTitle title="Закладки" />
-      <Layout leftSide={<LeftSide />} rightSide={<RightSide />} />
+      <CatalogLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );
 }

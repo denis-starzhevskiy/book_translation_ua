@@ -1,7 +1,7 @@
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
 import React from 'react';
 import PageTitle from '@/components/elements/PageTitle';
-import { Layout } from '@/components/CatalogLayout';
+import CatalogLayout from '@/components/layouts/CatalogLayout';
 import { ownTranslationsData } from '@/utils/ownTranslationsData';
 import Image from 'next/image';
 import s from './own-translations.module.scss';
@@ -19,7 +19,7 @@ export default function OwnTranslationsPage() {
         ]}
       />
       <PageTitle title="Власні переклади" />
-      <Layout leftSide={<LeftSide />} rightSide={<RightSide />} />
+      <CatalogLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );
 }

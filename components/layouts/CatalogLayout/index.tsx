@@ -1,11 +1,11 @@
 import React from 'react';
 
-type LayoutProps = {
+type CatalogLayoutProps = {
   leftSide: React.ReactNode;
   rightSide: React.ReactNode;
 };
 
-export const Layout: React.FC<LayoutProps> = ({ leftSide, rightSide }) => {
+const CatalogLayout: React.FC<CatalogLayoutProps> = ({ leftSide, rightSide }) => {
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '9fr 3fr', columnGap: 30 }}>
       <div>{leftSide}</div>
@@ -13,3 +13,5 @@ export const Layout: React.FC<LayoutProps> = ({ leftSide, rightSide }) => {
     </div>
   );
 };
+
+export default CatalogLayout;
