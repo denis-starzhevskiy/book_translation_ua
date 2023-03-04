@@ -23,15 +23,13 @@
 
 .checkmark {
   position: relative;
-  height: 20px;
-  width: 20px;
-  background-color: var(--color-main);
-  border: 1px solid var(--color-light_grey);
-  border-radius: 5px;
+  height: 16px;
+  width: 16px;
+  border: 1px solid var(--color-dark);
+  border-radius: 50%;
 }
 
 .container input:checked ~ .checkmark {
-  background-color: var(--color-blue);
   border: 1px solid var(--color-blue);
 }
 
@@ -46,15 +44,13 @@
 }
 
 .container .checkmark:after {
-  left: 6px;
-  top: 3px;
-  width: 6px;
-  height: 10px;
-  border: solid var(--color-main);
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(35deg);
-  -ms-transform: rotate(35deg);
-  transform: rotate(35deg);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 8px;
+  width: 8px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
 }
 
 .label {

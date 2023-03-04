@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import s from './Advertisement.module.scss'
 import clsx from "clsx";
-import CheckBox from "@/components/elements/CheckBox/CheckBox";
+import Index from "@/components/elements/Checkbox";
 import {successIcon} from "@/components/modules/icons";
 import {useMediaQuery} from "@/hooks/useMediaQuery";
 
@@ -30,8 +30,8 @@ const AdvertisementComponent = ({advertisement, key}: AdvertisementComponentProp
     return (<div key={key} className={clsx(s.rowContainer, checked && s.checkedItem)}>
         {isMobile ? (
             <div className={s.mobileTitle}>
-                <CheckBox customClass={s.checkBoxComponent} checked={checked}
-                          setChecked={() => setChecked(prev => !prev)}/>
+                <Index customClass={s.checkBoxComponent} checked={checked}
+                       onChange={() => setChecked(prev => !prev)}/>
                 <div>
                     <h4 className={s.titleText}>{advertisement.name}</h4>
                     <h4 className={s.subTitleText}>{advertisement.subTitle}</h4>
@@ -39,8 +39,8 @@ const AdvertisementComponent = ({advertisement, key}: AdvertisementComponentProp
             </div>
         ) : (
             <>
-                <CheckBox customClass={s.checkBoxComponent} checked={checked}
-                          setChecked={() => setChecked(prev => !prev)}/>
+                <Index customClass={s.checkBoxComponent} checked={checked}
+                       onChange={() => setChecked(prev => !prev)}/>
                 <div className={s.title}>
                     <h4 className={s.titleText}>{advertisement.name}</h4>
                     <h4 className={s.subTitleText}>{advertisement.subTitle}</h4>

@@ -9,7 +9,7 @@ import clsx from 'clsx';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Link from 'next/link';
 
-export default function CatalogPage() {
+export default function OwnTranslationsPage() {
   return (
     <div className={'container'}>
       <BreadCrumbs

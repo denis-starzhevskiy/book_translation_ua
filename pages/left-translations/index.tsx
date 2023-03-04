@@ -10,8 +10,9 @@ import Checkbox from '@/components/elements/Checkbox';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Select from '@/components/elements/Select';
 import Search from '@/components/elements/Search';
+import RadioGroup from '@/components/elements/RadioGroup';
 
-export default function CatalogPage() {
+export default function LeftTranslationsPage() {
   return (
     <div className={'container'}>
       <BreadCrumbs
@@ -21,7 +22,7 @@ export default function CatalogPage() {
         ]}
       />
       <PageTitle title="Покинуті переклади" />
-      <p style={{ color: 'white' }}>
+      <p style={{ color: 'white', marginBottom: 30 }}>
         Забрати кинутий переклад можуть користувачі, які зарегистрировані на сайті більше 90 днів
       </p>
       <Layout leftSide={<LeftSide />} rightSide={<RightSide />} />
@@ -37,9 +38,9 @@ const LeftSide = () => {
         icon={'search'}
         className={s.searchInputContainer}
       />
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className={'color-light-grey'}>Показано 36 робіт</div>
-        <div>
+        <div style={{ display: 'flex', gap: 15, alignItems: 'center' }}>
           <div className={'color-light-grey'}>Сортувати за</div>
           <Select
             value={'назвою'}
@@ -104,7 +105,15 @@ const RightSide = () => {
         ))}
       />
       <Divider />
-      <Accordion title={'Обмеження за віком 18+'} content={null} />
+      <Accordion
+        title={'Обмеження за віком 18+'}
+        content={
+          <RadioGroup
+            options={['Так', 'Ні'].map((item) => ({ label: item, value: item }))}
+            value={'Так'}
+          />
+        }
+      />
       <Accordion
         title={'Тип'}
         content={['Переклад', 'Авторське'].map((item) => (
@@ -154,7 +163,15 @@ const RightSide = () => {
         ))}
       />
       <Divider />
-      <Accordion title={'Без фендомів'} content={null} />
+      <Accordion
+        title={'Без фендомів'}
+        content={
+          <RadioGroup
+            options={['Так', 'Ні'].map((item) => ({ label: item, value: item }))}
+            value={'Так'}
+          />
+        }
+      />
       <Divider />
       <Accordion
         title={'Кількість розділів'}
@@ -177,12 +194,20 @@ const RightSide = () => {
         content={
           <div style={{ display: 'flex', justifyContent: 'space-between' }}>
             <label>
-              <span>від </span>
-              <input type="text" style={{ width: 60, height: 30 }} />
+              <span>від</span>
+              <input
+                type="text"
+                className={'input'}
+                style={{ width: 60, height: 30, border: '1px solid #5E626C', marginLeft: 15 }}
+              />
             </label>
             <label>
-              <span>до </span>
-              <input type="text" style={{ width: 60, height: 30 }} />
+              <span>до</span>
+              <input
+                type="text"
+                className={'input'}
+                style={{ width: 60, height: 30, border: '1px solid #5E626C', marginLeft: 15 }}
+              />
             </label>
           </div>
         }

@@ -6,8 +6,9 @@ import { catalogData } from '@/utils/catalogData';
 import Book from '@/components/elements/Book';
 import { Layout } from '@/components/CatalogLayout';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
+import Select from '@/components/elements/Select';
 
-export default function CatalogPage() {
+export default function BookmarksPage() {
   return (
     <div className={'container'}>
       <BreadCrumbs
@@ -25,10 +26,25 @@ export default function CatalogPage() {
 const LeftSide = () => {
   return (
     <div style={{ marginBottom: 102 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className={'color-light-grey'}>Показано 36 робіт</div>
-        <div>
+        <div style={{ display: 'flex', gap: 15, alignItems: 'center' }}>
           <div className={'color-light-grey'}>Сортувати за</div>
+          <Select
+            value={'назвою'}
+            options={[
+              'назвою',
+              'датою створення',
+              'датою оновлення',
+              'рейтингами',
+              'переглядами',
+              'кількістю лайків',
+              'кількістю безкоштовних сторінок',
+              'кількістю сторінок',
+              'кількістю розділів',
+              'кількістю в закладках',
+            ].map((value) => ({ label: value, value }))}
+          />
         </div>
       </div>
       <div className={s.line} />

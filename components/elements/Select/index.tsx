@@ -17,11 +17,12 @@ type SelectProps = {
   options: Option[];
 };
 
-const Select: React.FC<SelectProps> = ({ value, onChange, options }) => {
+const Select: React.FC<SelectProps> = ({ value: valueProp, onChange, options }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef<Element | null>(null);
   const selectContainerRef = useRef<HTMLDivElement>(null);
   const [mounted, setMounted] = useState(false);
+  const [value, setValue] = useState(valueProp);
 
   useEffect(() => {
     ref.current = document.querySelector<HTMLElement>('#portal');
@@ -56,8 +57,9 @@ const Select: React.FC<SelectProps> = ({ value, onChange, options }) => {
                       key={option.value}
                       className={clsx(option.value === value && s.activeOption)}
                       onClick={() => {
-                        onChange?.(option.value);
+                        setValue(option.value);
                         setOpen(false);
+                        onChange?.(option.value);
                       }}>
                       {option.label}
                     </li>
