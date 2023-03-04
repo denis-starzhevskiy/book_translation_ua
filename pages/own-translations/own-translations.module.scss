@@ -1,0 +1,49 @@
+.line {
+  background-color: var(--color-dark);
+  height: 0.0625rem;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.table {
+  width: 100%;
+  th {
+    color: #a5acbd;
+    text-align: left;
+    font-size: 14px;
+  }
+  td {
+    color: white;
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding-bottom: 15px;
+  }
+}
+
+.number {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.categoryName {
+  margin-bottom: 15px;
+}
+
+.commission {
+  background: #282d3b;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 18px;
+  gap: 10px;
+  color: white;
+}
+
+.commissionNumber {
+  color: #fded01;
+  font-weight: 600;
+  font-size: 36px;
+}

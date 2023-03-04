@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import clsx from "clsx";
 
 import s from './GeneralInformation.module.scss'
-import CheckBox from "@/components/elements/CheckBox/CheckBox";
+import Index from "@/components/elements/Checkbox";
 import {downloadCloudIcon, pictureDownloadIcon} from "@/components/modules/icons";
 import CheckOption from "@/components/elements/CheckOption/CheckOption";
 
@@ -118,8 +118,8 @@ const GeneralInformation = () => {
                 <th className={clsx(s.th, s.commonTdTh, s.verticalAlign)} scope={'row'}>Обмеження за віком 18+</th>
                 <td className={clsx(s.td, s.commonTdTh)}>
                     <div className={s.checkBoxesContainer}>
-                        <CheckBox title={"Так"} checked={ageLimit} setChecked={() => setAgeLimit(true)}/>
-                        <CheckBox title={"Ні"} checked={!ageLimit} setChecked={() => setAgeLimit(false)}/>
+                        <Index label={"Так"} checked={ageLimit} onChange={() => setAgeLimit(true)}/>
+                        <Index label={"Ні"} checked={!ageLimit} onChange={() => setAgeLimit(false)}/>
                     </div>
                 </td>
             </tr>

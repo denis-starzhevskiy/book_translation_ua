@@ -392,6 +392,18 @@ footer {
   }
 }
 
+.color-white {
+  color: var(--color-white);
+}
+
+.color-dark {
+  color: var(--color-dark);
+}
+
+.color-light-grey {
+  color: var(--color-light_grey);
+}
+
 .input:not([type=checkbox]) {
   border: 1px solid var(--color-white);
   border-radius: 5px;
