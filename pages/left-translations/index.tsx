@@ -4,7 +4,7 @@ import PageTitle from '@/components/elements/PageTitle';
 import s from './left-translations.module.scss';
 import { catalogData } from '@/utils/catalogData';
 import Book from '@/components/elements/Book';
-import { Layout } from '@/components/CatalogLayout';
+import CatalogLayout from '@/components/layouts/CatalogLayout';
 import Accordion from '@/components/elements/Accordion';
 import Checkbox from '@/components/elements/Checkbox';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
@@ -25,7 +25,7 @@ export default function LeftTranslationsPage() {
       <p style={{ color: 'white', marginBottom: 30 }}>
         Забрати кинутий переклад можуть користувачі, які зарегистрировані на сайті більше 90 днів
       </p>
-      <Layout leftSide={<LeftSide />} rightSide={<RightSide />} />
+      <CatalogLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );
 }
