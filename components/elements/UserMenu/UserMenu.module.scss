@@ -1,18 +1,17 @@
 .selectContainer {
-  border: 1px solid #ffffff;
-  border-radius: 5px;
   display: flex;
   align-items: center;
   padding: 10px 15px;
   gap: 10px;
   cursor: pointer;
+  width: 300px;
   input {
     color: var(--color-white);
     font-size: 14px;
   }
 }
 .selectPopover {
-  padding: 5px 5px;
+  padding: 5px 15px;
   background: #282d3b;
   border-radius: 5px;
   position: absolute;
@@ -22,14 +21,36 @@
     cursor: pointer;
     padding: 5px 10px;
     &:hover {
-      background-color: var(--color-dark);
+
     }
     &.activeOption {
       color: var(--color-blue);
     }
   }
 }
-
 .valueText {
   flex-grow: 1;
+}
+
+.createButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.optionButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.customButton {
+  border: 1px solid var(--color-dark);
+}
+
+.optionButton {
+  border: 1px solid var(--color-backgroud);
+  width: 100%;
+  justify-content: flex-start;
+  padding: 10px 10px;
 }

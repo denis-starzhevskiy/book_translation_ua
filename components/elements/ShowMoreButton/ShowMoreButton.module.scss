@@ -6,4 +6,13 @@
   padding: 10px 15px;
   gap: 10px;
   color: var(--color-white);
+
+  &:hover {
+    background-color: var(--color-blue);
+    color: black;
+
+    svg path {
+      stroke: black;
+    }
+  }
 }

@@ -15,9 +15,10 @@ type SelectProps = {
   value?: string;
   onChange?: (value: string) => void;
   options: Option[];
+  customClass?: string;
 };
 
-const Select: React.FC<SelectProps> = ({ value: valueProp, onChange, options }) => {
+const Select: React.FC<SelectProps> = ({ value: valueProp, onChange, options, customClass }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef<Element | null>(null);
   const selectContainerRef = useRef<HTMLDivElement>(null);
@@ -35,8 +36,11 @@ const Select: React.FC<SelectProps> = ({ value: valueProp, onChange, options }) 
 
   return (
     <>
-      <div className={s.selectContainer} ref={selectContainerRef} onClick={() => setOpen(!open)}>
-        <div>{value}</div>
+      <div
+        className={clsx(s.selectContainer, customClass)}
+        ref={selectContainerRef}
+        onClick={() => setOpen(!open)}>
+        <div className={s.valueText}>{value}</div>
         <Image src={expandIcon} alt={'expand icon'} />
       </div>
       {mounted && ref.current && open
@@ -47,7 +51,11 @@ const Select: React.FC<SelectProps> = ({ value: valueProp, onChange, options }) 
                 style={{
                   ...(selectContainerRect && {
                     left: selectContainerRect.left,
-                    top: selectContainerRect.top + selectContainerRect.height + 10,
+                    top:
+                      selectContainerRect.top +
+                      selectContainerRect.height +
+                      10 +
+                      document.documentElement.scrollTop,
                     width: selectContainerRect.width,
                   }),
                 }}>

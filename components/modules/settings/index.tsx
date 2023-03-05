@@ -4,8 +4,9 @@ import s from './Settings.module.scss';
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
 import PasswordInput from '@/components/elements/PasswordInput';
 import { saveDataIcon } from '@/components/modules/icons';
-import CheckBox from '@/components/elements/CheckBox/CheckBox';
 import ColorPicker from '@/components/elements/ColorPicker';
+// @ts-ignore
+import CheckBox from '@/components/elements/CheckBox';
 
 const settingOptions = [
   {
@@ -48,7 +49,7 @@ const SettingsView = () => {
         <BreadCrumbs
           path={[
             { title: 'Головна', link: '/' },
-            { title: 'Перегляд книги', link: '/books/543543' },
+            { title: 'Налаштування', link: '/books/543543' },
           ]}
         />
         <h2 className={s.title}>НАЛАШТУВАННЯ</h2>
@@ -64,9 +65,11 @@ const SettingsView = () => {
           </div>
           <div>
             <h4 className={s.sectionTitle}>Налаштування</h4>
-            {settingOptions.map((item, idx) => {
-              return <CheckBox key={idx} title={item.title} />;
-            })}
+            <div className={s.checkBoxOptionsContainer}>
+              {settingOptions.map((item, idx) => {
+                return <CheckBox key={idx} label={item.title} />;
+              })}
+            </div>
           </div>
           <div>
             <h4 className={s.sectionTitle}>Змінити пароль</h4>
