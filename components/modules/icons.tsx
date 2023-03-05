@@ -97,3 +97,15 @@ export const checkedFilledIcon = () => {
     </svg>)
 
 }
+
+export const letterIcon = () => {
+    return (
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3.33203" y="5" width="13.3333" height="10" rx="2" stroke="white" />
+          <path
+            d="M3.33203 7.5L9.10427 10.3861C9.66732 10.6676 10.3301 10.6676 10.8931 10.3861L16.6654 7.5"
+            stroke="white"
+          />
+      </svg>
+    );
+};
