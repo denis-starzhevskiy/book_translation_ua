@@ -51,7 +51,28 @@
   }
 }
 
+.prevNextButtonContainer {
+  display: flex;
+  gap: 15px;
+}
+
 .prevNextButton {
   width: 34px;
   height: 34px;
+}
+
+.sortContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 90px;
 }

@@ -5,10 +5,11 @@ import s from './notifications.module.scss';
 import NotificationsLayout from '@/components/layouts/NotificationsLayout';
 import Checkbox from '@/components/elements/CheckBox';
 import Select from '@/components/elements/Select';
+import clsx from 'clsx';
 
 export default function CatalogPage() {
   return (
-    <div className={'container'} style={{ marginBottom: 90 }}>
+    <div className={clsx('container', s.container)}>
       <BreadCrumbs
         path={[
           { title: 'Головна', link: '/' },
@@ -47,10 +48,10 @@ const LeftSide = () => {
 const RightSide = () => {
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ color: '#A5ACBD' }}>Показано 4 сповіщення</div>
-        <div style={{ display: 'flex', gap: 15, alignItems: 'center' }}>
-          <div style={{ color: '#A5ACBD' }}>Показати сповіщення</div>
+      <div className={s.section}>
+        <div className={'color-light-grey'}>Показано 4 сповіщення</div>
+        <div className={s.sortContainer}>
+          <div className={'color-light-grey'}>Показати сповіщення</div>
           <Select
             value={'назвою'}
             options={[

@@ -2,9 +2,14 @@
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  color: #FFFFFF;
+  color: #ffffff;
+  .accordionTitleIcon {
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
 }
 
-.accordionContent{
+.accordionContent {
   padding-top: 22px;
 }

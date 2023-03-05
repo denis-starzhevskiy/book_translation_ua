@@ -4,3 +4,43 @@
   margin-bottom: 40px;
   margin-top: 30px;
 }
+
+.showMoreButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+}
+
+.sortContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marginBottom102 {
+  margin-bottom: 30px;
+}
+
+.booksList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 30px;
+  .booksListItem {
+    width: 255px;
+    height: 414px;
+  }
+}
+
+.myBookmarksTitle {
+  color: #a5acbd;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 35px;
+}
