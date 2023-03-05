@@ -10,7 +10,7 @@ import {
   noticeIcon,
   settingIcon,
 } from '@/components/modules/icons';
-import Divider from '@/components/elements/Divider/Divider';
+import Divider from '@/components/elements/Divider';
 
 const ProfilePage = () => {
   const userInfo = {
