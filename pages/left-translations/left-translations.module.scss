@@ -17,3 +17,39 @@
     }
   }
 }
+
+.showMoreButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+}
+
+.booksList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 30px;
+  .booksListItem {
+    width: 255px;
+    height: 414px;
+  }
+}
+
+.marginBottom30 {
+  margin-bottom: 30px;
+}
+
+.marginBottom102 {
+  margin-bottom: 102px;
+}
+
+.sortContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

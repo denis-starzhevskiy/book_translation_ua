@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './CatalogLayout.module.scss';
 
 type CatalogLayoutProps = {
   leftSide: React.ReactNode;
@@ -7,7 +8,7 @@ type CatalogLayoutProps = {
 
 const CatalogLayout: React.FC<CatalogLayoutProps> = ({ leftSide, rightSide }) => {
   return (
-    <div style={{ display: 'grid', gridTemplateColumns: '9fr 3fr', columnGap: 30 }}>
+    <div className={s.container}>
       <div>{leftSide}</div>
       <div>{rightSide}</div>
     </div>

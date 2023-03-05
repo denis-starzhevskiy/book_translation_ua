@@ -11,10 +11,8 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
     }
   }
-
 }
 
 .th {
@@ -22,7 +20,7 @@
   font-weight: 400;
   text-align: left;
 
-  @media(max-width: 991.98px){
+  @media (max-width: 991.98px) {
     font-size: 14px;
   }
 
@@ -58,27 +56,31 @@
   vertical-align: top;
 }
 
-.tagsContainer {
+.tagsList {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   width: 600px;
   @media (max-width: 991.98px) {
-    width: 100%
+    width: 100%;
   }
 }
 
+.tagsContainer {
+  width: 80%;
+}
+
 .tag {
-  border: 1px solid #A5ACBD;
+  border: 1px solid #a5acbd;
   border-radius: 5px;
   padding: 5px;
-  color: #A5ACBD;
+  color: #a5acbd;
   font-size: 14px;
 }
 
 .outlinedButton {
-  background: #282D3B;
-  border: 1px solid #282D3B;
+  background: #282d3b;
+  border: 1px solid #282d3b;
 }
 
 .checkBoxesContainer {

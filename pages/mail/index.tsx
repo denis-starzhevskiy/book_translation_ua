@@ -15,7 +15,7 @@ import { letterIcon } from '@/components/modules/icons';
 
 export default function CatalogPage() {
   return (
-    <div className={'container'} style={{ marginBottom: 90 }}>
+    <div className={clsx('container', s.container)}>
       <BreadCrumbs
         path={[
           { title: 'Головна', link: '/' },
@@ -51,11 +51,11 @@ const RightSide = () => {
 
   return (
     <>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <div style={{ color: '#A5ACBD' }}>Показано 4 сповіщення</div>
-        <div style={{ display: 'flex', gap: 15, alignItems: 'center' }}>
-          <div style={{ color: '#A5ACBD' }}>1 - 50 из 256</div>
-          <div style={{ display: 'flex', gap: 15 }}>
+      <div className={s.section}>
+        <div className={'color-light-grey'}>Показано 4 сповіщення</div>
+        <div className={s.sortContainer}>
+          <div className={'color-light-grey'}>1 - 50 из 256</div>
+          <div className={s.prevNextButtonContainer}>
             <Button className={s.prevNextButton}>
               <Image src={expandLeftIcon} alt="previous" />
             </Button>

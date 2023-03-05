@@ -47,3 +47,33 @@
   font-weight: 600;
   font-size: 36px;
 }
+
+.showMoreButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 52px;
+}
+
+.activityStatisticsTitle {
+  color: #a5acbd;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 35px;
+}
+
+.booksList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 60px 64px;
+  .bookImage {
+    width: 100%;
+    height: 340px;
+    margin-bottom: 20px;
+  }
+}
+
+.marginBottom102 {
+  margin-bottom: 30px;
+}
+

@@ -3,10 +3,11 @@ import React from 'react';
 import PageTitle from '@/components/elements/PageTitle';
 import Link from 'next/link';
 import s from './faq.module.scss';
+import clsx from 'clsx';
 
 export default function CatalogPage() {
   return (
-    <div className={'container'} style={{ marginBottom: 90 }}>
+    <div className={clsx('container', s.container)}>
       <BreadCrumbs
         path={[
           { title: 'Головна', link: '/' },
@@ -14,9 +15,9 @@ export default function CatalogPage() {
         ]}
       />
       <PageTitle title="FAQ" />
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 29 }}>
-        <h4 style={{ color: 'white', fontWeight: 600, fontSize: 18 }}>Як користуватись сайтом</h4>
-        <p className={'color-white'} style={{ fontSize: 16 }}>
+      <div className={s.mainContainer}>
+        <h4 className={clsx('color-white', s.title)}>Як користуватись сайтом</h4>
+        <p className={clsx('color-white', s.paragraph)}>
           Вітання. Добро пожалувати в систему перекладів «UA Translate». Цей сайт призначений для
           професійних мов любительських перекладів будь-яких новелів, фанфіків, ранобе з різних мов.
           Ваші улюблені ранобе, новели та інше на українській мові!
