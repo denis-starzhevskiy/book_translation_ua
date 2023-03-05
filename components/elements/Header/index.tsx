@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import React from 'react';
-import Button from '../Button';
+import React, { useState } from 'react';
+import Button from '@/components/elements/Button';
 import GlobalSvgSelector from '@/components/GlobalSvgSelector';
 import { useScrollBlock } from '@/hooks/useScrollBlock';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -12,10 +12,14 @@ import Navigation from '../Navigation';
 import logo from '../../../public/images/logo.png';
 
 import s from './Header.module.scss';
+import SignUpModal from '@/components/elements/SignUpModal';
+import SignInModal from '@/components/elements/SignInModal';
 
 type HeaderProps = {};
 
 const Header = (props: HeaderProps) => {
+  const [openSignUpModal, setOpenSignUpModal] = useState(false);
+  const [openSignInModal, setOpenSignInModal] = useState(false);
   const isMobile = useMediaQuery('991.98');
   const [menuVisible, setMenuVisible] = React.useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
@@ -47,8 +51,16 @@ const Header = (props: HeaderProps) => {
               <div className={s.inner}>
                 <ThemeToggle />
                 <div className={s.buttons}>
-                  <Button icon="user_circle">Реєстрація</Button>
-                  <Button icon="sign_in">Увійти</Button>
+                  <Button
+                    icon="user_circle"
+                    onClick={() => {
+                      setOpenSignUpModal(true);
+                    }}>
+                    Реєстрація
+                  </Button>
+                  <Button icon="sign_in" onClick={() => setOpenSignInModal(true)}>
+                    Увійти
+                  </Button>
                 </div>
               </div>
             )}
@@ -75,13 +87,23 @@ const Header = (props: HeaderProps) => {
             <div className={s.inner}>
               <ThemeToggle />
               <div className={s.buttons}>
-                <Button icon="user_circle">Реєстрація</Button>
-                <Button icon="sign_in">Увійти</Button>
+                <Button
+                  icon="user_circle"
+                  onClick={() => {
+                    setOpenSignUpModal(true);
+                  }}>
+                  Реєстрація
+                </Button>
+                <Button icon="sign_in" onClick={() => setOpenSignInModal(true)}>
+                  Увійти
+                </Button>
               </div>
             </div>
           </div>
         </div>
       )}
+      <SignUpModal open={openSignUpModal} onClose={() => setOpenSignUpModal(false)} />
+      <SignInModal open={openSignInModal} onClose={() => setOpenSignInModal(false)} />
     </header>
   );
 };

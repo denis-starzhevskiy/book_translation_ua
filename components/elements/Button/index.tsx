@@ -1,7 +1,6 @@
 import GlobalSvgSelector from '@/components/GlobalSvgSelector';
 import clsx from 'clsx';
 import React from 'react';
-
 import s from './Button.module.scss';
 
 type Props = {

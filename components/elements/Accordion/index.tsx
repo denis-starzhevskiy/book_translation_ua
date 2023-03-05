@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import s from './Accordion.module.scss';
 import expandDownIcon from '../../../public/images/expandDownIcon.svg';
 import Image from 'next/image';
@@ -13,7 +13,7 @@ type AccordionProps = {
 const Accordion: React.FC<AccordionProps> = ({ title, content, open: openProp = true }) => {
   const [open, setOpen] = useState(openProp);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setOpen(openProp);
   }, [openProp]);
 

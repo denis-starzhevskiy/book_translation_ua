@@ -22,32 +22,32 @@ export default function CatalogPage() {
           професійних мов любительських перекладів будь-яких новелів, фанфіків, ранобе з різних мов.
           Ваші улюблені ранобе, новели та інше на українській мові!
         </p>
-        <Link href={'/'} className={s.link}>
+        <Link href={'/'} className={'link'}>
           Як створити переклад на сайті UAlate.com
         </Link>
-        <Link href={'/'} className={s.link}>
+        <Link href={'/'} className={'link'}>
           Налаштування перекладу
         </Link>
-        <Link href={'/'} className={s.link}>
+        <Link href={'/'} className={'link'}>
           Теги / жанри / фендоми
         </Link>
-        <Link href={'/'} className={s.link}>
+        <Link href={'/'} className={'link'}>
           Як створити перший розділ у перекладі
         </Link>
-        <Link href={'/'} className={s.link}>
+        <Link href={'/'} className={'link'}>
           Реклама вашого перекладу на сайті
         </Link>
-        <Link href={'/'} className={s.link}>
+        <Link href={'/'} className={'link'}>
           Як поповнити баланс
         </Link>
-        <Link href={'/'} className={s.link}>
-          Як знайти цікаву розповідь{' '}
+        <Link href={'/'} className={'link'}>
+          Як знайти цікаву розповідь
         </Link>
-        <Link href={'/'} className={s.link}>
-          Помилки у тексті{' '}
+        <Link href={'/'} className={'link'}>
+          Помилки у тексті
         </Link>
-        <Link href={'/'} className={s.link}>
-          Коментарі{' '}
+        <Link href={'/'} className={'link'}>
+          Коментарі
         </Link>
       </div>
     </div>
