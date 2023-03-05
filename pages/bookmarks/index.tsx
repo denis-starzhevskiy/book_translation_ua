@@ -4,9 +4,10 @@ import PageTitle from '@/components/elements/PageTitle';
 import s from './bookmarks.module.scss';
 import { catalogData } from '@/utils/catalogData';
 import Book from '@/components/elements/Book';
-import { Layout } from '@/components/CatalogLayout';
+import CatalogLayout from '@/components/layouts/CatalogLayout';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Select from '@/components/elements/Select';
+import Menu from '@/components/elements/Menu';
 
 export default function BookmarksPage() {
   return (
@@ -18,17 +19,17 @@ export default function BookmarksPage() {
         ]}
       />
       <PageTitle title="Закладки" />
-      <Layout leftSide={<LeftSide />} rightSide={<RightSide />} />
+      <CatalogLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );
 }
 
 const LeftSide = () => {
   return (
-    <div style={{ marginBottom: 102 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <div className={s.marginBottom102}>
+      <div className={s.section}>
         <div className={'color-light-grey'}>Показано 36 робіт</div>
-        <div style={{ display: 'flex', gap: 15, alignItems: 'center' }}>
+        <div className={s.sortContainer}>
           <div className={'color-light-grey'}>Сортувати за</div>
           <Select
             value={'назвою'}
@@ -48,14 +49,9 @@ const LeftSide = () => {
         </div>
       </div>
       <div className={s.line} />
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '40px 30px' }}>
+      <div className={s.booksList}>
         {catalogData.map((item) => (
-          <div
-            key={item.id}
-            style={{
-              width: 255,
-              height: 414,
-            }}>
+          <div key={item.id} className={s.booksListItem}>
             <Book
               id={item.id}
               title={item.title}
@@ -66,7 +62,7 @@ const LeftSide = () => {
           </div>
         ))}
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 52 }}>
+      <div className={s.showMoreButtonContainer}>
         <ShowMoreButton />
       </div>
     </div>
@@ -76,36 +72,14 @@ const LeftSide = () => {
 const RightSide = () => {
   return (
     <div>
-      <h3
-        style={{
-          color: '#A5ACBD',
-          fontWeight: 400,
-          fontSize: 14,
-          lineHeight: '17px',
-          marginBottom: 35,
-        }}>
-        Мої закладки
-      </h3>
-      <ul className={s.buttonsList}>
-        <li>
-          <button className={s.active}>Усі</button>
-        </li>
-        <li>
-          <button>Читаю</button>
-        </li>
-        <li>
-          <button>Обране</button>
-        </li>
-        <li>
-          <button>У планах</button>
-        </li>
-        <li>
-          <button>Кинув</button>
-        </li>
-        <li>
-          <button>Прочитав</button>
-        </li>
-      </ul>
+      <h3 className={s.myBookmarksTitle}>Мої закладки</h3>
+      <Menu
+        value={'Усі'}
+        menu={['Усі', 'Читаю', 'У планах', 'Кинув', 'Прочитав'].map((item) => ({
+          label: item,
+          value: item,
+        }))}
+      />
     </div>
   );
 };

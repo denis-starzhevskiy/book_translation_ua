@@ -1,7 +1,7 @@
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
 import React from 'react';
 import PageTitle from '@/components/elements/PageTitle';
-import { Layout } from '@/components/CatalogLayout';
+import CatalogLayout from '@/components/layouts/CatalogLayout';
 import { ownTranslationsData } from '@/utils/ownTranslationsData';
 import Image from 'next/image';
 import s from './own-translations.module.scss';
@@ -19,22 +19,18 @@ export default function OwnTranslationsPage() {
         ]}
       />
       <PageTitle title="Власні переклади" />
-      <Layout leftSide={<LeftSide />} rightSide={<RightSide />} />
+      <CatalogLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );
 }
 
 const LeftSide = () => {
   return (
-    <div style={{ marginBottom: 102 }}>
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '60px 64px' }}>
+    <div className={s.marginBottom102}>
+      <div className={s.booksList}>
         {ownTranslationsData.map((item) => (
           <Link key={item.id} href={item.link}>
-            <Image
-              src={item.image}
-              alt="book image"
-              style={{ width: '100%', height: 340, marginBottom: 20 }}
-            />
+            <Image src={item.image} alt="book image" className={s.bookImage} />
             <table className={s.table}>
               <tbody>
                 <tr>
@@ -62,7 +58,7 @@ const LeftSide = () => {
           </Link>
         ))}
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: 52 }}>
+      <div className={s.showMoreButtonContainer}>
         <ShowMoreButton />
       </div>
     </div>
@@ -72,16 +68,7 @@ const LeftSide = () => {
 const RightSide = () => {
   return (
     <div>
-      <h3
-        style={{
-          color: '#A5ACBD',
-          fontWeight: 400,
-          fontSize: 14,
-          lineHeight: '17px',
-          marginBottom: 35,
-        }}>
-        Статистика діяльності
-      </h3>
+      <h3 className={s.activityStatisticsTitle}>Статистика діяльності</h3>
       <div>
         <div className={clsx('color-white', s.categoryName)}>Перекладів</div>
         <div className={clsx('color-dark', s.number)}>54</div>
@@ -94,7 +81,7 @@ const RightSide = () => {
         <Divider />
         <div className={s.commission}>
           <div className={s.commissionNumber}>10%</div>
-          <div style={{ color: 'white' }}>Комісія</div>
+          <div className={'color-white'}>Комісія</div>
         </div>
       </div>
     </div>

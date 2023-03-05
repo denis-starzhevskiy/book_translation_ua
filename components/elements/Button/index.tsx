@@ -6,7 +6,7 @@ import s from './Button.module.scss';
 
 type Props = {
   className?: string;
-  children: string;
+  children?: React.ReactNode;
   type?: 'button' | 'submit' | 'reset' | undefined;
   disabled?: boolean;
   onClick?: () => void;

@@ -7,7 +7,7 @@ type CheckBoxProps = {
   name?: string;
   customClass?: string;
   checked?: boolean;
-  onChange?: () => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
 const Checkbox = ({ label, customClass, checked, onChange, name }: CheckBoxProps) => {

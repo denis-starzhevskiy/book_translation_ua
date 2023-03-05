@@ -1,0 +1,78 @@
+.line {
+  background-color: var(--color-dark);
+  height: 0.0625rem;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+.writeLetterButton {
+  margin-bottom: 30px;
+}
+
+.lettersList {
+  margin: 33px 0;
+  li {
+    border-top: 1px solid #5e626c;
+    border-bottom: 1px solid #5e626c;
+    .letterContainer {
+      padding: 10px;
+      margin: 20px 0;
+      display: grid;
+      gap: 5px;
+      grid-template-columns: 1fr 2fr 2fr 8fr 1fr;
+      .date {
+        font-size: 16px;
+        color: var(--color-light_grey);
+      }
+      .sender {
+        font-size: 16px;
+      }
+      .content {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.lettersList {
+  border-collapse: collapse;
+  tr {
+    padding: 10px;
+  }
+  td {
+    vertical-align: top;
+    padding: 25px 5px;
+    border-top: 1px solid #5e626c;
+    border-bottom: 1px solid #5e626c;
+  }
+  .selectedRow {
+    background: #282d3b;
+    border-radius: 5px;
+  }
+}
+
+.prevNextButtonContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.prevNextButton {
+  width: 34px;
+  height: 34px;
+}
+
+.sortContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 90px;
+}
