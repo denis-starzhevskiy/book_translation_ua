@@ -18,7 +18,7 @@ const Filters = ({}: FiltersProps) => {
           <Checkbox key={item} label={item} name={'language'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Обмеження за віком 18+'}
         content={
@@ -28,6 +28,7 @@ const Filters = ({}: FiltersProps) => {
           />
         }
       />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Тип'}
         content={['Переклад', 'Авторське'].map((item) => (
