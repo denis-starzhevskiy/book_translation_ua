@@ -110,3 +110,7 @@
 
   color: #FFFFFF;
 }
+
+.customInput:not([type=checkbox]) {
+  width: 80%
+}
