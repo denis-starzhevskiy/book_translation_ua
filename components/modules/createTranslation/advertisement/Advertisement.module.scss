@@ -1,3 +1,5 @@
+
+
 .container {
   display: flex;
   flex-direction: column;
@@ -57,6 +59,7 @@
   border-radius: 5px;
 
   font-style: normal;
+  font-family: 'Inter';
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -64,9 +67,15 @@
   align-items: center;
   color: #FFFFFF;
 
+  position: relative;
+
   @media (max-width: 991.98px) {
     width: 40%;
   }
+}
+
+.datePicker:not([type=checkbox])::-webkit-calendar-picker-indicator {
+  background-image: url("../../../../public/images/datePickerIcon.svg");
 }
 
 .orderButtonContainer {
@@ -114,6 +123,19 @@
   line-height: 15px;
   color: var(--color-light_grey);
   margin: 10px 0;
+}
+
+.customSelect {
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-dark);
+
+  color: #FFFFFF;
 }
 
 .bottomBorder {

@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 
 import s from './GeneralInformation.module.scss';
+// @ts-ignore
 import Index from '@/components/elements/Checkbox';
 import { downloadCloudIcon, pictureDownloadIcon } from '@/components/modules/icons';
 import CheckOption from '@/components/elements/CheckOption/CheckOption';
+import Select from '@/components/elements/Select';
 
 const GeneralInformation = () => {
   const [ageLimit, setAgeLimit] = useState<boolean>();
@@ -27,9 +29,11 @@ const GeneralInformation = () => {
             Мова оригіналу
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <select className={'select'}>
-              <option value={'example'}>Англійська</option>
-            </select>
+            <Select
+              value={'Англійська'}
+              options={['Англійська', 'Українська'].map((value) => ({ label: value, value }))}
+              customClass={s.customSelect}
+            />
           </td>
         </tr>
         <tr>
@@ -53,9 +57,11 @@ const GeneralInformation = () => {
             Автор твору
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <select className={'select'}>
-              <option value={'example'}>Англійська</option>
-            </select>
+            <Select
+              value={'Англійська'}
+              options={['Англійська', 'Українська'].map((value) => ({ label: value, value }))}
+              customClass={s.customSelect}
+            />
           </td>
         </tr>
         <tr>
@@ -63,9 +69,11 @@ const GeneralInformation = () => {
             Статус випуску
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <select className={'select'}>
-              <option value={'example'}>Англійська</option>
-            </select>
+            <Select
+              value={'Англійська'}
+              options={['Англійська', 'Українська'].map((value) => ({ label: value, value }))}
+              customClass={s.customSelect}
+            />
           </td>
         </tr>
         <tr>
@@ -73,9 +81,11 @@ const GeneralInformation = () => {
             Статус перекладу
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <select className={'select'}>
-              <option value={'example'}>Англійська</option>
-            </select>
+            <Select
+              value={'Англійська'}
+              options={['Англійська', 'Українська'].map((value) => ({ label: value, value }))}
+              customClass={s.customSelect}
+            />
           </td>
         </tr>
         <tr className={s.bottomBorder}>
@@ -127,9 +137,11 @@ const GeneralInformation = () => {
             Фендом
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <select className={'select'}>
-              <option value={'example'}>Англійська</option>
-            </select>
+            <Select
+              value={'Англійська'}
+              options={['Англійська', 'Українська'].map((value) => ({ label: value, value }))}
+              customClass={s.customSelect}
+            />
           </td>
         </tr>
         <tr className={s.bottomBorder}>
