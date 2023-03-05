@@ -40,7 +40,7 @@ const GeneralInformation = () => {
             Назва мовою оригіналу
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <input type={'text'} className={'input'} />
+            <input type={'text'} className={clsx('input', s.customInput)} value={'Англійська'} />
           </td>
         </tr>
         <tr>
@@ -48,7 +48,7 @@ const GeneralInformation = () => {
             Назва мовою перекладу
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <input type={'text'} className={'input'} />
+            <input type={'text'} className={clsx('input', s.customInput)} value={'Англійська'} />
           </td>
         </tr>
         <tr>
