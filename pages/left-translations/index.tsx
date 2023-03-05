@@ -10,6 +10,7 @@ import Select from '@/components/elements/Select';
 import Search from '@/components/elements/Search';
 import Filters from '@/components/elements/Filters';
 import clsx from 'clsx';
+import Divider from '@/components/elements/Divider';
 
 export default function LeftTranslationsPage() {
   return (
@@ -58,7 +59,7 @@ const LeftSide = () => {
           />
         </div>
       </div>
-      <div className={s.line} />
+      <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div className={s.booksList}>
         {catalogData.map((item) => (
           <div key={item.id} className={s.booksListItem}>

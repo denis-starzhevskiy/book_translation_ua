@@ -8,6 +8,7 @@ import CatalogLayout from '@/components/layouts/CatalogLayout';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Select from '@/components/elements/Select';
 import Menu from '@/components/elements/Menu';
+import Divider from '@/components/elements/Divider';
 
 export default function BookmarksPage() {
   return (
@@ -48,7 +49,7 @@ const LeftSide = () => {
           />
         </div>
       </div>
-      <div className={s.line} />
+      <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div className={s.booksList}>
         {catalogData.map((item) => (
           <div key={item.id} className={s.booksListItem}>

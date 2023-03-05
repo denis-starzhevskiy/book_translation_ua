@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import s from './ViewUserPage.module.scss';
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
 import { letterIcon } from '@/components/modules/icons';
-import Divider from '@/components/elements/Divider/Divider';
+import Divider from '@/components/elements/Divider';
 
 const Index = () => {
   const userInfo = {

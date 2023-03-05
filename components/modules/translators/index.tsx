@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import s from './Translators.module.scss';
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
 import Select from '@/components/elements/Select';
-import Divider from '@/components/elements/Divider/Divider';
+import Divider from '@/components/elements/Divider';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 
 type TranslatorsProps = {

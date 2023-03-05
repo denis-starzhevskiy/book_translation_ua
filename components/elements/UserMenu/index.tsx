@@ -14,7 +14,7 @@ import {
   settingIcon,
 } from '@/components/modules/icons';
 import logo from '@/public/images/logo.png';
-import Divider from '@/components/elements/Divider/Divider';
+import Divider from '@/components/elements/Divider';
 import Popover from '@/components/elements/Popover';
 
 type UserMenuProps = {

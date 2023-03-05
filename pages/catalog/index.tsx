@@ -9,6 +9,7 @@ import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Search from '@/components/elements/Search';
 import Select from '@/components/elements/Select';
 import Filters from '@/components/elements/Filters';
+import Divider from '@/components/elements/Divider';
 
 export default function CatalogPage() {
   return (
@@ -54,7 +55,7 @@ const LeftSide = () => {
           />
         </div>
       </div>
-      <div className={s.line} />
+      <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div className={s.booksList}>
         {catalogData.map((item) => (
           <div key={item.id} className={s.booksListItem}>

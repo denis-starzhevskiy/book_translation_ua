@@ -4,6 +4,7 @@ import Checkbox from '@/components/elements/CheckBox';
 import Accordion from '@/components/elements/Accordion';
 import RadioGroup from '@/components/elements/RadioGroup';
 import clsx from 'clsx';
+import Divider from '@/components/elements/Divider';
 
 type FiltersProps = {};
 
@@ -33,49 +34,49 @@ const Filters = ({}: FiltersProps) => {
           <Checkbox key={item} label={item} name={'type'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Жанри'}
         content={['Переклад', 'Авторське'].map((item) => (
           <Checkbox key={item} label={item} name={'genre'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Теги'}
         content={['Переклад', 'Авторське'].map((item) => (
           <Checkbox key={item} label={item} name={'genre'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Фендом'}
         content={['Переклад', 'Авторське'].map((item) => (
           <Checkbox key={item} label={item} name={'fandom'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Виключити жанри'}
         content={['Переклад', 'Авторське'].map((item) => (
           <Checkbox key={item} label={item} name={'excluded genre'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Виключити теги'}
         content={['Переклад', 'Авторське'].map((item) => (
           <Checkbox key={item} label={item} name={'excluded tag'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Виключити фендоми'}
         content={['Переклад', 'Авторське'].map((item) => (
           <Checkbox key={item} label={item} name={'excluded fandom'} />
         ))}
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Без фендомів'}
         content={
@@ -85,7 +86,7 @@ const Filters = ({}: FiltersProps) => {
           />
         }
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Кількість розділів'}
         content={
@@ -101,7 +102,7 @@ const Filters = ({}: FiltersProps) => {
           </div>
         }
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <Accordion
         title={'Кількість сторінок'}
         content={
@@ -117,7 +118,7 @@ const Filters = ({}: FiltersProps) => {
           </div>
         }
       />
-      <Divider />
+      <Divider style={{ margin: '20px 0' }} />
       <div>
         {[
           'Готові на 100%',
@@ -134,7 +135,5 @@ const Filters = ({}: FiltersProps) => {
     </div>
   );
 };
-
-const Divider = () => <div style={{ height: 1, backgroundColor: '#A5ACBD', margin: '20px 0' }} />;
 
 export default Filters;

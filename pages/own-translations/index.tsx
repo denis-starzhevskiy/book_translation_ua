@@ -8,6 +8,7 @@ import s from './own-translations.module.scss';
 import clsx from 'clsx';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Link from 'next/link';
+import Divider from '@/components/elements/Divider';
 
 export default function OwnTranslationsPage() {
   return (
@@ -72,13 +73,13 @@ const RightSide = () => {
       <div>
         <div className={clsx('color-white', s.categoryName)}>Перекладів</div>
         <div className={clsx('color-dark', s.number)}>54</div>
-        <Divider />
+        <Divider style={{ margin: '20px 0' }} />
         <div className={clsx('color-white', s.categoryName)}>Сторінок переведено</div>
         <div className={clsx('color-dark', s.number)}>658</div>
-        <Divider />
+        <Divider style={{ margin: '20px 0' }} />
         <div className={clsx('color-white', s.categoryName)}>Символів переклав</div>
         <div className={clsx('color-dark', s.number)}>5988</div>
-        <Divider />
+        <Divider style={{ margin: '20px 0' }} />
         <div className={s.commission}>
           <div className={s.commissionNumber}>10%</div>
           <div className={'color-white'}>Комісія</div>
@@ -87,5 +88,3 @@ const RightSide = () => {
     </div>
   );
 };
-
-const Divider = () => <div style={{ height: 1, backgroundColor: '#A5ACBD', margin: '20px 0' }} />;

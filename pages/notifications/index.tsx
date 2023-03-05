@@ -6,6 +6,7 @@ import NotificationsLayout from '@/components/layouts/NotificationsLayout';
 import Checkbox from '@/components/elements/CheckBox';
 import Select from '@/components/elements/Select';
 import clsx from 'clsx';
+import Divider from '@/components/elements/Divider';
 
 export default function CatalogPage() {
   return (
@@ -69,7 +70,7 @@ const RightSide = () => {
           />
         </div>
       </div>
-      <div className={s.line} />
+      <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div>
         {new Array(4).fill(0).map((_, index) => (
           <div key={index} className={s.notification}>
