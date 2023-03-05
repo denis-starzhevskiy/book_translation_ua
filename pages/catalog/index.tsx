@@ -9,6 +9,7 @@ import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Search from '@/components/elements/Search';
 import Select from '@/components/elements/Select';
 import Filters from '@/components/elements/Filters';
+import UserMenu from '@/components/elements/UserMenu';
 
 export default function CatalogPage() {
   return (
@@ -20,6 +21,7 @@ export default function CatalogPage() {
         ]}
       />
       <PageTitle title="Каталог" />
+      <UserMenu user={{ name: 'dfkjd', surname: 'dfkdj' }} />
       <CatalogLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );

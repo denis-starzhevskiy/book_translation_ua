@@ -15,7 +15,7 @@ type TouchEvents = 'touchstart' | 'touchend';
 type Events = FocusEvent | MouseEvent | TouchEvent;
 
 interface Props extends HTMLAttributes<HTMLElement> {
-  onClickAway: (event: Events) => void;
+  onClickAway?: (event: Events) => void;
   focusEvent?: FocusEvents;
   mouseEvent?: MouseEvents;
   touchEvent?: TouchEvents;
@@ -97,7 +97,7 @@ const ClickAwayListener: FunctionComponent<Props> = ({
         return;
       }
 
-      onClickAway(event);
+      onClickAway?.(event);
     };
 
     nodeDocument.addEventListener(mouseEvent, handleEvents);

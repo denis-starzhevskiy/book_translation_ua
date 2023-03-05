@@ -16,7 +16,7 @@
   background: #282d3b;
   border-radius: 5px;
   position: absolute;
-  ul > li {
+  & > li {
     color: var(--color-white);
     font-size: 14px;
     cursor: pointer;
