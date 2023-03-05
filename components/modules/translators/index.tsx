@@ -53,14 +53,16 @@ const TranslatorsView = ({ translators }: TranslatorsProps) => {
         <Divider />
         <table className={s.translatorsTable}>
           <thead>
-            <th>Місце в рейтингу</th>
-            <th>Нікнейм</th>
-            <th>Кількість книг</th>
-            <th>Кількість коментарів</th>
-            <th>Останнє відвідування</th>
+            <tr>
+              <th>Місце в рейтингу</th>
+              <th>Нікнейм</th>
+              <th>Кількість книг</th>
+              <th>Кількість коментарів</th>
+              <th>Останнє відвідування</th>
+            </tr>
           </thead>
           <tbody>
-            {translators.map((item, idx) => {
+            {translators.map((item) => {
               return (
                 <tr key={item.ratingPlace}>
                   <td>

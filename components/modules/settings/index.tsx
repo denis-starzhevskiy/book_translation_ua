@@ -7,6 +7,7 @@ import { saveDataIcon } from '@/components/modules/icons';
 import ColorPicker from '@/components/elements/ColorPicker';
 // @ts-ignore
 import CheckBox from '@/components/elements/CheckBox';
+import Slider from '@/components/elements/Slider';
 
 const settingOptions = [
   {
@@ -74,6 +75,7 @@ const SettingsView = () => {
           <div>
             <h4 className={s.sectionTitle}>Змінити пароль</h4>
             <h5 className={s.subSectionText}>Розмір тексту</h5>
+            <Slider />
             <div></div>
             <div className={s.colorPickersContainer}>
               <h5 className={s.subSectionText}>Колір тексту</h5>
