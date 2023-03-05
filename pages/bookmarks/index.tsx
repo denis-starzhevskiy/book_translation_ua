@@ -7,6 +7,7 @@ import Book from '@/components/elements/Book';
 import CatalogLayout from '@/components/layouts/CatalogLayout';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Select from '@/components/elements/Select';
+import Menu from '@/components/elements/Menu';
 
 export default function BookmarksPage() {
   return (
@@ -86,26 +87,13 @@ const RightSide = () => {
         }}>
         Мої закладки
       </h3>
-      <ul className={s.buttonsList}>
-        <li>
-          <button className={s.active}>Усі</button>
-        </li>
-        <li>
-          <button>Читаю</button>
-        </li>
-        <li>
-          <button>Обране</button>
-        </li>
-        <li>
-          <button>У планах</button>
-        </li>
-        <li>
-          <button>Кинув</button>
-        </li>
-        <li>
-          <button>Прочитав</button>
-        </li>
-      </ul>
+      <Menu
+        value={'Усі'}
+        menu={['Усі', 'Читаю', 'У планах', 'Кинув', 'Прочитав'].map((item) => ({
+          label: item,
+          value: item,
+        }))}
+      />
     </div>
   );
 };
