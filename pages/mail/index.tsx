@@ -5,7 +5,7 @@ import s from './mail.module.scss';
 import NotificationsLayout from '@/components/layouts/NotificationsLayout';
 import Button from '@/components/elements/Button';
 import Menu from '@/components/elements/Menu';
-import Checkbox from '@/components/elements/CheckBox';
+import Checkbox from '@/components/elements/CheckBox/CheckBox';
 import clsx from 'clsx';
 import trashIcon from '../../public/images/trash.svg';
 import expandLeftIcon from '../../public/images/expandLeft.svg';

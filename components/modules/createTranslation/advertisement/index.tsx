@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 
 import s from './Advertisement.module.scss';
 import clsx from 'clsx';
-// @ts-ignore
-import Index from '@/components/elements/Checkbox';
 import { successIcon } from '@/components/modules/icons';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import Select from '@/components/elements/Select';
+import CheckBox from '@/components/elements/CheckBox/CheckBox';
 
 type AdvertisementProps = {
   advertisements: {
@@ -33,7 +32,7 @@ const AdvertisementComponent = ({ advertisement, key }: AdvertisementComponentPr
     <div key={key} className={clsx(s.rowContainer, checked && s.checkedItem)}>
       {isMobile ? (
         <div className={s.mobileTitle}>
-          <Index
+          <CheckBox
             customClass={s.checkBoxComponent}
             checked={checked}
             onChange={() => setChecked((prev) => !prev)}
@@ -45,7 +44,7 @@ const AdvertisementComponent = ({ advertisement, key }: AdvertisementComponentPr
         </div>
       ) : (
         <>
-          <Index
+          <CheckBox
             customClass={s.checkBoxComponent}
             checked={checked}
             onChange={() => setChecked((prev) => !prev)}

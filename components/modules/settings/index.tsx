@@ -6,7 +6,7 @@ import PasswordInput from '@/components/elements/PasswordInput';
 import { saveDataIcon } from '@/components/modules/icons';
 import ColorPicker from '@/components/elements/ColorPicker';
 // @ts-ignore
-import CheckBox from '@/components/elements/CheckBox';
+import CheckBox from '@/components/elements/CheckBox/CheckBox';
 import Slider from '@/components/elements/Slider';
 
 const settingOptions = [

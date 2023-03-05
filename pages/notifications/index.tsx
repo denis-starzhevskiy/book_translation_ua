@@ -3,7 +3,7 @@ import React from 'react';
 import PageTitle from '@/components/elements/PageTitle';
 import s from './notifications.module.scss';
 import NotificationsLayout from '@/components/layouts/NotificationsLayout';
-import Checkbox from '@/components/elements/CheckBox';
+import Checkbox from '@/components/elements/CheckBox/CheckBox';
 import Select from '@/components/elements/Select';
 import clsx from 'clsx';
 import Divider from '@/components/elements/Divider';

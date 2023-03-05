@@ -2,11 +2,10 @@ import React, { useState } from 'react';
 import clsx from 'clsx';
 
 import s from './GeneralInformation.module.scss';
-// @ts-ignore
-import Index from '@/components/elements/Checkbox';
 import { downloadCloudIcon, pictureDownloadIcon } from '@/components/modules/icons';
 import CheckOption from '@/components/elements/CheckOption/CheckOption';
 import Select from '@/components/elements/Select';
+import CheckBox from '@/components/elements/CheckBox/CheckBox';
 
 const GeneralInformation = () => {
   const [ageLimit, setAgeLimit] = useState<boolean>();
@@ -150,8 +149,8 @@ const GeneralInformation = () => {
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
             <div className={s.checkBoxesContainer}>
-              <Index label={'Так'} checked={ageLimit} onChange={() => setAgeLimit(true)} />
-              <Index label={'Ні'} checked={!ageLimit} onChange={() => setAgeLimit(false)} />
+              <CheckBox label={'Так'} checked={ageLimit} onChange={() => setAgeLimit(true)} />
+              <CheckBox label={'Ні'} checked={!ageLimit} onChange={() => setAgeLimit(false)} />
             </div>
           </td>
         </tr>

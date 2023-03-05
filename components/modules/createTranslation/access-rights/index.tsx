@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './AccessRights.module.scss';
-import Index from '@/components/elements/Checkbox';
+import Checkbox from '@/components/elements/CheckBox/CheckBox';
 import clsx from 'clsx';
 
 const permissions = [
@@ -35,13 +35,13 @@ const AccessRights = () => {
           <div key={idx} className={clsx(s.rowContainer, s.bottomBorder)}>
             <h4 className={s.permissionText}>{item.title}</h4>
             <div className={s.centered}>
-              <Index customClass={s.checkBoxComponent} />
+              <Checkbox customClass={s.checkBoxComponent} />
             </div>
             <div className={s.centered}>
-              <Index customClass={s.checkBoxComponent} />
+              <Checkbox customClass={s.checkBoxComponent} />
             </div>
             <div className={s.centered}>
-              <Index customClass={s.checkBoxComponent} />
+              <Checkbox customClass={s.checkBoxComponent} />
             </div>
           </div>
         );

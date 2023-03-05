@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './Filters.module.scss';
-import Checkbox from '@/components/elements/CheckBox';
+import Checkbox from '@/components/elements/CheckBox/CheckBox';
 import Accordion from '@/components/elements/Accordion';
 import RadioGroup from '@/components/elements/RadioGroup';
 import clsx from 'clsx';
