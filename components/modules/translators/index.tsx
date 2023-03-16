@@ -5,6 +5,7 @@ import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
 import Select from '@/components/elements/Select';
 import Divider from '@/components/elements/Divider';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 type TranslatorsProps = {
   translators: {
@@ -17,6 +18,8 @@ type TranslatorsProps = {
 };
 
 const TranslatorsView = ({ translators }: TranslatorsProps) => {
+  const isMobile = useMediaQuery('991.98');
+
   return (
     <section className={clsx(s.section)}>
       <div className="container">
@@ -54,10 +57,10 @@ const TranslatorsView = ({ translators }: TranslatorsProps) => {
         <table className={s.translatorsTable}>
           <thead>
             <tr>
-              <th>Місце в рейтингу</th>
+              <th>{isMobile ? 'Місце' : 'Місце в рейтингу'}</th>
               <th>Нікнейм</th>
-              <th>Кількість книг</th>
-              <th>Кількість коментарів</th>
+              <th>{isMobile ? 'Книги' : 'Кількість книг'}</th>
+              <th>{isMobile ? 'Коментарі' : 'Кількість коментарів'}</th>
               <th>Останнє відвідування</th>
             </tr>
           </thead>

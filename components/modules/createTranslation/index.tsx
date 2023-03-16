@@ -60,7 +60,7 @@ const CreateTranslation = () => {
     <section className={clsx(s.section)}>
       <div className={clsx('container')}>
         <div className={s.container}>
-          <div id={'header'}>
+          <div id={'header'} className={s.header}>
             <BreadCrumbs
               path={[
                 { title: 'Головна', link: '/' },

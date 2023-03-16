@@ -3,7 +3,10 @@
   border-collapse: collapse;
 
   row-gap: 20px;
-  width: 100%;
+  width: 80%;
+  @media (max-width: 991.98px) {
+    width: 100%;
+  }
 
   tr {
     padding-bottom: 10px;
@@ -47,7 +50,7 @@
   @media (max-width: 600px) {
     justify-content: center;
     width: calc(100% - 2.5rem);
-    column-gap: 10px;
+    column-gap: 20px;
   }
 }
 
@@ -70,7 +73,7 @@
 }
 
 .smallInput:not([type=checkbox]) {
-  width: 10%;
+  width: 15%;
 
   @media(max-width: 991.98px) {
     width: 100px;

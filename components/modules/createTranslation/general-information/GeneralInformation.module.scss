@@ -3,7 +3,10 @@
   border-collapse: collapse;
 
   row-gap: 20px;
-  width: 100%;
+  width: 80%;
+  @media (max-width: 991.98px) {
+    width: 100%;
+  }
 
   tr {
     @media (max-width: 600px) {
@@ -60,7 +63,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  width: 600px;
+  width: 500px;
   @media (max-width: 991.98px) {
     width: 100%;
   }
@@ -96,6 +99,37 @@
   width: 80%;
   display: flex;
   column-gap: 30px;
+  @media (max-width: 991.98px) {
+    width: 100%;
+    justify-content: center;
+  };
+
+  align-items: center;
+
+  input {
+    display: none;
+  };
+
+  img {
+    cursor: pointer;
+    margin-left: 5px;
+  };
+}
+
+.labelSaveImg {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.uploadFileText {
+  background-color: #282D3B;
+  border-color: #282D3B;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .customSelect {

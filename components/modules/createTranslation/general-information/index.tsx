@@ -9,6 +9,24 @@ import CheckBox from '@/components/elements/CheckBox/CheckBox';
 
 const GeneralInformation = () => {
   const [ageLimit, setAgeLimit] = useState<boolean>();
+  const [file, setFile] = useState<File>();
+  const [files, setFiles] = useState<object>();
+
+  const setFileByIdx = ({ idx, inputFile }: { idx: number; inputFile: any }) => {
+    const file = inputFile.target.files[0];
+    if (file) {
+      setFiles((prev) => {
+        return { ...prev, [idx]: file };
+      });
+    }
+  };
+
+  const saveImg = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFile(file);
+    }
+  };
 
   const availableTags = [
     { label: 'переклад' },
@@ -160,9 +178,24 @@ const GeneralInformation = () => {
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
             <div className={s.actionContainer}>
-              <button className={clsx('button', s.outlinedButton)}>
-                {downloadCloudIcon()}Вибрати зображення
-              </button>
+              <div style={{ cursor: 'pointer' }}>
+                <label className={s.labelSaveImg}>
+                  <h3 className={clsx('button', s.uploadFileText)}>
+                    {downloadCloudIcon()}Вибрати зображення
+                  </h3>
+                  <input
+                    accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
+                    type="file"
+                    id="file1"
+                    onChange={saveImg}
+                  />
+                </label>
+              </div>
+              {file && (
+                <div className={s.wrapperImgName}>
+                  <h4 style={{ fontWeight: '600' }}>{file.name.slice(0, 25)}</h4>
+                </div>
+              )}
             </div>
           </td>
         </tr>
@@ -172,10 +205,61 @@ const GeneralInformation = () => {
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
             <div className={s.actionContainer}>
-              <button className={clsx('button', s.outlinedButton)}>{pictureDownloadIcon()}</button>
-              <button className={clsx('button', s.outlinedButton)}>{pictureDownloadIcon()}</button>
-              <button className={clsx('button', s.outlinedButton)}>{pictureDownloadIcon()}</button>
-              <button className={clsx('button', s.outlinedButton)}>{pictureDownloadIcon()}</button>
+              <div style={{ cursor: 'pointer' }}>
+                <label className={s.labelSaveImg}>
+                  <h3 className={clsx('button', s.uploadFileText)}>{pictureDownloadIcon()}</h3>
+                  <input
+                    accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
+                    type="file"
+                    id="file1"
+                    onChange={saveImg}
+                  />
+                </label>
+              </div>
+              <div style={{ cursor: 'pointer' }}>
+                <label className={s.labelSaveImg}>
+                  <h3 className={clsx('button', s.uploadFileText)}>{pictureDownloadIcon()}</h3>
+                  <input
+                    accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
+                    type="file"
+                    id="file1"
+                    onChange={saveImg}
+                  />
+                </label>
+              </div>
+              <div style={{ cursor: 'pointer' }}>
+                <label className={s.labelSaveImg}>
+                  <h3 className={clsx('button', s.uploadFileText)}>{pictureDownloadIcon()}</h3>
+                  <input
+                    accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
+                    type="file"
+                    id="file1"
+                    onChange={saveImg}
+                  />
+                </label>
+              </div>
+              <div style={{ cursor: 'pointer' }}>
+                <label className={s.labelSaveImg}>
+                  <h3 className={clsx('button', s.uploadFileText)}>{pictureDownloadIcon()}</h3>
+                  <input
+                    accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
+                    type="file"
+                    id="file1"
+                    onChange={saveImg}
+                  />
+                </label>
+              </div>
+              <div style={{ cursor: 'pointer' }}>
+                <label className={s.labelSaveImg}>
+                  <h3 className={clsx('button', s.uploadFileText)}>{pictureDownloadIcon()}</h3>
+                  <input
+                    accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
+                    type="file"
+                    id="file1"
+                    onChange={saveImg}
+                  />
+                </label>
+              </div>
             </div>
           </td>
         </tr>

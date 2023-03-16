@@ -25,6 +25,10 @@
   text-transform: uppercase;
 
   color: #FFFFFF;
+
+  @media (max-width: 991.98px) {
+    text-align: center;
+  }
 }
 
 .subTitle {
@@ -89,7 +93,7 @@
     color: #96989D;
 
     @media (max-width: 991.98px) {
-      font-size: 24px;
+      font-size: 20px;
     }
   }
 }
