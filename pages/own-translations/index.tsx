@@ -73,13 +73,13 @@ const RightSide = () => {
       <div>
         <div className={clsx('color-white', s.categoryName)}>Перекладів</div>
         <div className={clsx('color-dark', s.number)}>54</div>
-        <Divider style={{ margin: '20px 0' }} />
+        <Divider className={s.my20} />
         <div className={clsx('color-white', s.categoryName)}>Сторінок переведено</div>
         <div className={clsx('color-dark', s.number)}>658</div>
-        <Divider style={{ margin: '20px 0' }} />
+        <Divider className={s.my20} />
         <div className={clsx('color-white', s.categoryName)}>Символів переклав</div>
         <div className={clsx('color-dark', s.number)}>5988</div>
-        <Divider style={{ margin: '20px 0' }} />
+        <Divider className={s.my20} />
         <div className={s.commission}>
           <div className={s.commissionNumber}>10%</div>
           <div className={'color-white'}>Комісія</div>

@@ -17,3 +17,33 @@
   display: flex;
   justify-content: space-between;
 }
+
+.my20 {
+  margin: 20px 0;
+}
+
+.scrollContainer {
+  max-height: 205px;
+  overflow-y: auto;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #5e626c;
+    border-radius: 5px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #00eafd;
+    border-radius: 5px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #00eafd;
+  }
+}

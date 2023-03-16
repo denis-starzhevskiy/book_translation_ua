@@ -7,6 +7,8 @@ import Checkbox from '@/components/elements/CheckBox/CheckBox';
 import Select from '@/components/elements/Select';
 import clsx from 'clsx';
 import Divider from '@/components/elements/Divider';
+import Button from '@/components/elements/Button';
+import { saveDataIcon } from '@/components/modules/icons';
 
 export default function CatalogPage() {
   return (
@@ -42,6 +44,10 @@ const LeftSide = () => {
       {checkboxesValues.map((value) => (
         <Checkbox key={value} label={value} />
       ))}
+      <Button className={s.saveButton}>
+        {saveDataIcon()}
+        Зберегти
+      </Button>
     </>
   );
 };
