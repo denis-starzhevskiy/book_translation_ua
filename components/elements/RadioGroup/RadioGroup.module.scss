@@ -27,6 +27,9 @@
   width: 16px;
   border: 1px solid var(--color-dark);
   border-radius: 50%;
+  &:hover {
+    border: 1px solid var(--color-blue);
+  }
 }
 
 .container input:checked ~ .checkmark {

@@ -1,5 +1,5 @@
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
-import React from 'react';
+import React, { useState } from 'react';
 import PageTitle from '@/components/elements/PageTitle';
 import s from './catalog.module.scss';
 import { catalogData } from '@/utils/catalogData';
@@ -10,6 +10,8 @@ import Search from '@/components/elements/Search';
 import Select from '@/components/elements/Select';
 import Filters from '@/components/elements/Filters';
 import Divider from '@/components/elements/Divider';
+import MobileFiltersModal from '@/components/elements/MobileFiltersModal';
+import Button from '@/components/elements/Button';
 
 export default function CatalogPage() {
   return (
@@ -27,8 +29,14 @@ export default function CatalogPage() {
 }
 
 const LeftSide = () => {
+  const [openMobileFiltersModal, setOpenMobileFiltersModal] = useState(false);
+
   return (
     <div className={s.marginBottom102}>
+      <MobileFiltersModal
+        open={openMobileFiltersModal}
+        onClose={() => setOpenMobileFiltersModal(false)}
+      />
       <Search
         placeholder={'Пошук по покинутим перекладам'}
         icon={'search'}
@@ -55,6 +63,9 @@ const LeftSide = () => {
           />
         </div>
       </div>
+      <Button className={s.mobileFiltersButton} onClick={() => setOpenMobileFiltersModal(true)}>
+        Фільтри
+      </Button>
       <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div className={s.booksList}>
         {catalogData.map((item) => (
@@ -77,5 +88,9 @@ const LeftSide = () => {
 };
 
 const RightSide = () => {
-  return <Filters />;
+  return (
+    <div className={s.desktopFiltersContainer}>
+      <Filters />
+    </div>
+  );
 };

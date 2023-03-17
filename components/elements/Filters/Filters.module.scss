@@ -47,3 +47,13 @@
     background: #00eafd;
   }
 }
+
+.container {
+  margin-bottom: 20px;
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

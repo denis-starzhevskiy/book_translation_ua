@@ -14,7 +14,7 @@ const Checkbox = ({ label, customClass, checked, onChange, name }: CheckBoxProps
   return (
     <label className={clsx(s.container, customClass)}>
       <input type={'checkbox'} checked={checked} onChange={onChange} name={name} />
-      <span className={clsx(s.checkmark)}></span>
+      <div className={clsx(s.checkmark)}></div>
       {label && <span className={s.label}>{label}</span>}
     </label>
   );

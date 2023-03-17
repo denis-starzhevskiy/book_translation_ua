@@ -5,12 +5,13 @@ import Accordion from '@/components/elements/Accordion';
 import RadioGroup from '@/components/elements/RadioGroup';
 import clsx from 'clsx';
 import Divider from '@/components/elements/Divider';
+import TagCheckbox from '@/components/elements/TagCheckbox';
 
 type FiltersProps = {};
 
 const Filters = ({}: FiltersProps) => {
   return (
-    <div>
+    <div className={s.container}>
       <h3 className={s.filtersTitle}>Фільтри</h3>
       <Accordion
         title={'Мова оригіналу'}
@@ -51,9 +52,13 @@ const Filters = ({}: FiltersProps) => {
       <Divider className={s.my20} />
       <Accordion
         title={'Теги'}
-        content={['Переклад', 'Авторське'].map((item) => (
-          <Checkbox key={item} label={item} name={'genre'} />
-        ))}
+        content={
+          <div className={s.tagsContainer}>
+            {['переклад', 'гаррі потер', 'переклад'].map((item) => (
+              <TagCheckbox key={item} label={item} name={'tags'} />
+            ))}
+          </div>
+        }
       />
       <Divider className={s.my20} />
       <Accordion
