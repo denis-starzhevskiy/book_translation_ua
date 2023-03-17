@@ -21,7 +21,8 @@ const GeneralInformation = () => {
     }
   };
 
-  const saveImg = (e) => {
+  const saveImg = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (!e.target.files) return;
     const file = e.target.files[0];
     if (file) {
       setFile(file);
