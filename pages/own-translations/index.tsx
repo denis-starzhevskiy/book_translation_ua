@@ -1,5 +1,5 @@
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageTitle from '@/components/elements/PageTitle';
 import CatalogLayout from '@/components/layouts/CatalogLayout';
 import { ownTranslationsData } from '@/utils/ownTranslationsData';
@@ -9,6 +9,9 @@ import clsx from 'clsx';
 import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Link from 'next/link';
 import Divider from '@/components/elements/Divider';
+import Modal from '@/components/elements/Modal';
+import closeIcon from '@/public/images/closeIcon.svg';
+import Button from '@/components/elements/Button';
 
 export default function OwnTranslationsPage() {
   return (
@@ -26,8 +29,17 @@ export default function OwnTranslationsPage() {
 }
 
 const LeftSide = () => {
+  const [openMobileFiltersModal, setOpenMobileFiltersModal] = useState(false);
+
   return (
     <div className={s.marginBottom102}>
+      <MobileFiltersModal
+        open={openMobileFiltersModal}
+        onClose={() => setOpenMobileFiltersModal(false)}
+      />
+      <Button className={s.mobileStatisticsButton} onClick={() => setOpenMobileFiltersModal(true)}>
+        Статистика діяльності
+      </Button>
       <div className={s.booksList}>
         {ownTranslationsData.map((item) => (
           <Link key={item.id} href={item.link}>
@@ -66,7 +78,32 @@ const LeftSide = () => {
   );
 };
 
+type MobileFiltersModalProps = { open?: boolean; onClose?: () => void };
+
+const MobileFiltersModal = ({ open, onClose }: MobileFiltersModalProps) => {
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : 'unset';
+  }, [open]);
+
+  return (
+    <Modal open={open} className={s.modal}>
+      <div className={s.modalContainer}>
+        <Image className={s.closeIcon} src={closeIcon} alt={'close modal'} onClick={onClose} />
+        <Statistics />
+      </div>
+    </Modal>
+  );
+};
+
 const RightSide = () => {
+  return (
+    <div className={s.desktopStatisticsContainer}>
+      <Statistics />
+    </div>
+  );
+};
+
+const Statistics = () => {
   return (
     <div>
       <h3 className={s.activityStatisticsTitle}>Статистика діяльності</h3>
