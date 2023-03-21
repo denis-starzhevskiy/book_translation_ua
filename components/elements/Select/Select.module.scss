@@ -6,10 +6,6 @@
   padding: 10px 15px;
   gap: 10px;
   cursor: pointer;
-  input {
-    color: var(--color-white);
-    font-size: 14px;
-  }
 }
 .selectPopover {
   padding: 5px 5px;
@@ -31,4 +27,6 @@
 
 .valueText {
   flex-grow: 1;
+  color: white;
+  font-size: 14px;
 }

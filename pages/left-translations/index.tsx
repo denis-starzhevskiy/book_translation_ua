@@ -24,7 +24,7 @@ export default function LeftTranslationsPage() {
         ]}
       />
       <PageTitle title="Покинуті переклади" />
-      <p className={clsx('color-white', s.marginBottom30)}>
+      <p className={clsx('color-white', s.marginBottom30, 'fontsize16')}>
         Забрати кинутий переклад можуть користувачі, які зарегистрировані на сайті більше 90 днів
       </p>
       <CatalogLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
@@ -47,9 +47,9 @@ const LeftSide = () => {
         className={s.searchInputContainer}
       />
       <div className={s.section}>
-        <div className={'color-light-grey'}>Показано 36 робіт</div>
+        <div className={clsx('color-light-grey', 'fontsize14')}>Показано 36 робіт</div>
         <div className={s.sortContainer}>
-          <div className={'color-light-grey'}>Сортувати за</div>
+          <div className={clsx('color-light-grey', 'fontsize14')}>Сортувати за</div>
           <Select
             value={'назвою'}
             options={[

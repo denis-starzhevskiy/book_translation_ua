@@ -86,9 +86,9 @@ const RightSide = () => {
         onClose={() => setOpenMobileFiltersModal(false)}
       />
       <div className={s.section}>
-        <div className={'color-light-grey'}>Показано 4 сповіщення</div>
+        <div className={clsx('color-light-grey', 'fontsize14')}>Показано 4 сповіщення</div>
         <div className={s.sortContainer}>
-          <div className={'color-light-grey'}>Показати сповіщення</div>
+          <div className={clsx('color-light-grey', 'fontsize14')}>Показати сповіщення</div>
           <Select
             value={'назвою'}
             options={[
@@ -106,7 +106,9 @@ const RightSide = () => {
           />
         </div>
       </div>
-      <Button className={s.mobileFiltersButton} onClick={() => setOpenMobileFiltersModal(true)}>
+      <Button
+        className={clsx(s.mobileFiltersButton, 'fontsize14')}
+        onClick={() => setOpenMobileFiltersModal(true)}>
         Фільтри
       </Button>
       <Divider style={{ marginBottom: 40, marginTop: 30 }} />

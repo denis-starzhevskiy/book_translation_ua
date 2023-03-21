@@ -12,6 +12,7 @@ import Filters from '@/components/elements/Filters';
 import Divider from '@/components/elements/Divider';
 import MobileFiltersModal from '@/components/elements/MobileFiltersModal';
 import Button from '@/components/elements/Button';
+import clsx from 'clsx';
 
 export default function CatalogPage() {
   return (
@@ -43,9 +44,9 @@ const LeftSide = () => {
         className={s.searchInputContainer}
       />
       <div className={s.section}>
-        <div className={'color-light-grey'}>Показано 36 робіт</div>
+        <div className={clsx('color-light-grey', 'fontsize14')}>Показано 36 робіт</div>
         <div className={s.sortContainer}>
-          <div className={'color-light-grey'}>Сортувати за</div>
+          <div className={clsx('color-light-grey', 'fontsize14')}>Сортувати за</div>
           <Select
             value={'назвою'}
             options={[

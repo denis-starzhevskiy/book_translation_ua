@@ -30,9 +30,9 @@ const LeftSide = () => {
   return (
     <div className={s.marginBottom102}>
       <div className={s.section}>
-        <div className={'color-light-grey'}>Показано 36 робіт</div>
+        <div className={clsx('color-light-grey', 'fontsize14')}>Показано 36 робіт</div>
         <div className={s.sortContainer}>
-          <div className={'color-light-grey'}>Сортувати за</div>
+          <div className={clsx('color-light-grey', 'fontsize14')}>Сортувати за</div>
           <Select
             value={'назвою'}
             options={[
@@ -51,7 +51,7 @@ const LeftSide = () => {
         </div>
       </div>
       <div className={clsx(s.sortContainer, s.mobileFiltersSelect)}>
-        <div className={'color-light-grey'}>Категорії</div>
+        <div className={clsx('color-light-grey', 'fontsize14')}>Категорії</div>
         <Select
           options={['Усі', 'Читаю', 'У планах', 'Кинув', 'Прочитав'].map((item) => ({
             label: item,

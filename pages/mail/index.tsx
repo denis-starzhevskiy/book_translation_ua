@@ -58,7 +58,7 @@ const RightSide = () => {
           Написати листа
         </Button>
         <div className={s.sortContainer}>
-          <div className={'color-light-grey'}>Категорії</div>
+          <div className={clsx('color-light-grey', 'fontsize14')}>Категорії</div>
           <Select
             value={'Вхідні'}
             options={['Вхідні', 'Відправлені', 'Видаленні', 'Чернетки'].map((item) => ({
@@ -69,9 +69,9 @@ const RightSide = () => {
         </div>
       </div>
       <div className={s.section}>
-        <div className={'color-light-grey'}>Показано 4 сповіщення</div>
+        <div className={clsx('color-light-grey', 'fontsize14')}>Показано 4 сповіщення</div>
         <div className={s.sortContainer}>
-          <div className={'color-light-grey'}>1 - 50 из 256</div>
+          <div className={clsx('color-light-grey', 'fontsize14')}>1 - 50 из 256</div>
           <div className={s.prevNextButtonContainer}>
             <Button className={s.prevNextButton}>
               <Image src={expandLeftIcon} alt="previous" />
