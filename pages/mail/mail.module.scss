@@ -3,6 +3,10 @@
   width: 100%;
 }
 
+.writeLetterButtonMobile {
+  margin-bottom: 10px;
+}
+
 .lettersList {
   margin: 33px 0;
   li {
@@ -69,4 +73,10 @@
 
 .container {
   margin-bottom: 90px;
+}
+
+.mobileContainer {
+  @media (min-width: 900px) {
+    display: none;
+  }
 }
