@@ -1,5 +1,5 @@
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PageTitle from '@/components/elements/PageTitle';
 import s from './notifications.module.scss';
 import NotificationsLayout from '@/components/layouts/NotificationsLayout';
@@ -9,6 +9,9 @@ import clsx from 'clsx';
 import Divider from '@/components/elements/Divider';
 import Button from '@/components/elements/Button';
 import { saveDataIcon } from '@/components/modules/icons';
+import Modal from '@/components/elements/Modal';
+import Image from 'next/image';
+import closeIcon from '@/public/images/closeIcon.svg';
 
 export default function CatalogPage() {
   return (
@@ -19,12 +22,13 @@ export default function CatalogPage() {
           { title: 'Головна книги', link: '/' },
         ]}
       />
+      <PageTitle title="Сповіщення" />
       <NotificationsLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );
 }
 
-const LeftSide = () => {
+const Filters = () => {
   const checkboxesValues = [
     'Помилка у тексті',
     'Передача перекладу іншому',
@@ -40,7 +44,6 @@ const LeftSide = () => {
 
   return (
     <>
-      <PageTitle title="Сповіщення" />
       {checkboxesValues.map((value) => (
         <Checkbox key={value} label={value} />
       ))}
@@ -52,9 +55,36 @@ const LeftSide = () => {
   );
 };
 
+const LeftSide = () => {
+  return <Filters />;
+};
+
+type MobileFiltersModalProps = { open?: boolean; onClose?: () => void };
+
+const MobileFiltersModal = ({ open, onClose }: MobileFiltersModalProps) => {
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : 'unset';
+  }, [open]);
+
+  return (
+    <Modal open={open} className={s.modal}>
+      <div className={s.modalContainer}>
+        <Image className={s.closeIcon} src={closeIcon} alt={'close modal'} onClick={onClose} />
+        <Filters />
+      </div>
+    </Modal>
+  );
+};
+
 const RightSide = () => {
+  const [openMobileFiltersModal, setOpenMobileFiltersModal] = useState(false);
+
   return (
     <div>
+      <MobileFiltersModal
+        open={openMobileFiltersModal}
+        onClose={() => setOpenMobileFiltersModal(false)}
+      />
       <div className={s.section}>
         <div className={'color-light-grey'}>Показано 4 сповіщення</div>
         <div className={s.sortContainer}>
@@ -76,6 +106,9 @@ const RightSide = () => {
           />
         </div>
       </div>
+      <Button className={s.mobileFiltersButton} onClick={() => setOpenMobileFiltersModal(true)}>
+        Фільтри
+      </Button>
       <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div>
         {new Array(4).fill(0).map((_, index) => (

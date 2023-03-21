@@ -9,6 +9,7 @@ import ShowMoreButton from '@/components/elements/ShowMoreButton';
 import Select from '@/components/elements/Select';
 import Menu from '@/components/elements/Menu';
 import Divider from '@/components/elements/Divider';
+import clsx from 'clsx';
 
 export default function BookmarksPage() {
   return (
@@ -49,6 +50,16 @@ const LeftSide = () => {
           />
         </div>
       </div>
+      <div className={clsx(s.sortContainer, s.mobileFiltersSelect)}>
+        <div className={'color-light-grey'}>Категорії</div>
+        <Select
+          options={['Усі', 'Читаю', 'У планах', 'Кинув', 'Прочитав'].map((item) => ({
+            label: item,
+            value: item,
+          }))}
+          value={'Усі'}
+        />
+      </div>
       <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div className={s.booksList}>
         {catalogData.map((item) => (
@@ -72,15 +83,17 @@ const LeftSide = () => {
 
 const RightSide = () => {
   return (
-    <div>
-      <h3 className={s.myBookmarksTitle}>Мої закладки</h3>
-      <Menu
-        value={'Усі'}
-        menu={['Усі', 'Читаю', 'У планах', 'Кинув', 'Прочитав'].map((item) => ({
-          label: item,
-          value: item,
-        }))}
-      />
+    <div className={s.desktopFiltersContainer}>
+      <div>
+        <h3 className={s.myBookmarksTitle}>Мої закладки</h3>
+        <Menu
+          value={'Усі'}
+          menu={['Усі', 'Читаю', 'У планах', 'Кинув', 'Прочитав'].map((item) => ({
+            label: item,
+            value: item,
+          }))}
+        />
+      </div>
     </div>
   );
 };

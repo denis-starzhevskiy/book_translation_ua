@@ -22,6 +22,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px 30px;
   @media (max-width: 1200px) {
+    gap: 20px 15px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -52,14 +53,14 @@
 
 .desktopFiltersContainer {
   display: none;
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     display: block;
   }
 }
 
 .mobileFiltersButton {
   display: block;
-  @media (min-width: 1200px) {
+  @media (min-width: 1000px) {
     display: none;
   }
 }

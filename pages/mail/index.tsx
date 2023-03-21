@@ -12,6 +12,7 @@ import expandLeftIcon from '../../public/images/expandLeft.svg';
 import expandRightIcon from '../../public/images/expandRight.svg';
 import Image from 'next/image';
 import { letterIcon } from '@/components/modules/icons';
+import Select from '@/components/elements/Select';
 
 export default function CatalogPage() {
   return (
@@ -22,6 +23,7 @@ export default function CatalogPage() {
           { title: 'Головна книги', link: '/' },
         ]}
       />
+      <PageTitle title="Пошта" />
       <NotificationsLayout leftSide={<LeftSide />} rightSide={<RightSide />} />
     </div>
   );
@@ -30,7 +32,6 @@ export default function CatalogPage() {
 const LeftSide = () => {
   return (
     <>
-      <PageTitle title="Пошта" />
       <Button className={s.writeLetterButton}>
         {letterIcon()}
         Написати листа
@@ -51,6 +52,22 @@ const RightSide = () => {
 
   return (
     <>
+      <div className={s.mobileContainer}>
+        <Button className={s.writeLetterButtonMobile}>
+          {letterIcon()}
+          Написати листа
+        </Button>
+        <div className={s.sortContainer}>
+          <div className={'color-light-grey'}>Категорії</div>
+          <Select
+            value={'Вхідні'}
+            options={['Вхідні', 'Відправлені', 'Видаленні', 'Чернетки'].map((item) => ({
+              label: item,
+              value: item,
+            }))}
+          />
+        </div>
+      </div>
       <div className={s.section}>
         <div className={'color-light-grey'}>Показано 4 сповіщення</div>
         <div className={s.sortContainer}>
