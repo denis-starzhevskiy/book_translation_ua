@@ -58,9 +58,9 @@ const SettingsView = () => {
           <div>
             <h4 className={s.sectionTitle}>Змінити пароль</h4>
             <form className={s.form}>
-              <PasswordInput label={'Старий пароль'} />
-              <PasswordInput label={'Новий пароль'} />
-              <PasswordInput label={'Підтвердити пароль'} />
+              <PasswordInput label={'Старий пароль'} className={s.adaptiveInout} />
+              <PasswordInput label={'Новий пароль'} className={s.adaptiveInout} />
+              <PasswordInput label={'Підтвердити пароль'} className={s.adaptiveInout} />
               <button className={clsx('button', s.submitButton)}>{saveDataIcon()}Зберегти</button>
             </form>
           </div>
@@ -75,7 +75,9 @@ const SettingsView = () => {
           <div>
             <h4 className={s.sectionTitle}>Змінити пароль</h4>
             <h5 className={s.subSectionText}>Розмір тексту</h5>
-            <Slider />
+            <div className={s.sliderContainer}>
+              <Slider />
+            </div>
             <div></div>
             <div className={s.colorPickersContainer}>
               <h5 className={s.subSectionText}>Колір тексту</h5>

@@ -39,18 +39,24 @@ const Abonement = ({ abonements }: AbonementProps) => {
                 {item.name}
               </th>
               <td className={clsx(s.td, s.commonTdTh)}>
-                <input
-                  type={'text'}
-                  className={clsx('input', s.smallInput)}
-                  defaultValue={item.sections}
-                />
-                <h4 className={s.coinsLabel}>Pозділів</h4>
-                <input
-                  type={'text'}
-                  className={clsx('input', s.smallInput)}
-                  defaultValue={item.priceInCoins}
-                />
-                <h4 className={s.coinsLabel}>UAcoins</h4>
+                <div className={s.abonementContainer}>
+                  <div className={s.inputLabelContainer}>
+                    <input
+                      type={'text'}
+                      className={clsx('input', s.smallInput)}
+                      defaultValue={item.sections}
+                    />
+                    <h4 className={s.coinsLabel}>Pозділів</h4>
+                  </div>
+                  <div className={s.inputLabelContainer}>
+                    <input
+                      type={'text'}
+                      className={clsx('input', s.smallInput)}
+                      defaultValue={item.priceInCoins}
+                    />
+                    <h4 className={s.coinsLabel}>UAcoins</h4>
+                  </div>
+                </div>
               </td>
             </tr>
           );

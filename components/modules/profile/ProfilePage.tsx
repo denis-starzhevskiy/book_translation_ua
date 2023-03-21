@@ -44,42 +44,36 @@ const ProfilePage = () => {
           <button className={clsx('button', s.tabButton)}>Куплено</button>
           <button className={clsx('button', s.tabButton)}>{settingIcon()}Налаштування</button>
         </div>
-        <h4 className={clsx(s.subTitle)}>Статистика</h4>
+        <h4 className={clsx(s.mainTitle)}>Статистика</h4>
         <div className={s.dateExistsStatsContainer}>
-          <h4 className={clsx(s.subTitle)} style={{ fontSize: '16px' }}>
-            Разом з нами:
-          </h4>
-          <h4
+          <h4 className={clsx(s.subTitle)}>Разом з нами:</h4>
+          <p
             className={
               s.userDataText
-            }>{`з ${userInfo.registrationDate} (${userInfo.daysExists} дні)`}</h4>
+            }>{`з ${userInfo.registrationDate} (${userInfo.daysExists} дні)`}</p>
         </div>
-        <Divider style={{ width: '250px' }} />
+        <Divider className={s.divider} />
         <div className={s.shortStatsContainer}>
-          <h4 className={clsx(s.subTitle)}>Перекладів</h4>
-          <h4 className={clsx(s.subTitle)}>Сторінок переведено</h4>
-          <h4 className={clsx(s.subTitle)}>Символів переклав</h4>
-          <h4 className={clsx(s.subTitle)}>Прокоментував</h4>
-          <h4 className={s.userDataText}>{userInfo.translationNumber}</h4>
-          <h4 className={s.userDataText}>{userInfo.pagesTranslatedNumber}</h4>
-          <h4 className={s.userDataText}>{userInfo.symbolsTranslatedNumber}</h4>
-          <h4 className={s.userDataText}>{userInfo.commentsNumber}</h4>
+          <p className={clsx(s.subTitle)}>Перекладів</p>
+          <p className={clsx(s.subTitle)}>Сторінок переведено</p>
+          <p className={clsx(s.subTitle)}>Символів переклав</p>
+          <p className={clsx(s.subTitle)}>Прокоментував</p>
+          <p className={s.userDataText}>{userInfo.translationNumber}</p>
+          <p className={s.userDataText}>{userInfo.pagesTranslatedNumber}</p>
+          <p className={s.userDataText}>{userInfo.symbolsTranslatedNumber}</p>
+          <p className={s.userDataText}>{userInfo.commentsNumber}</p>
         </div>
-        <Divider style={{ width: '250px' }} />
+        <Divider className={s.divider} />
         <div className={s.balanceStatsContainer}>
-          <h4 className={clsx(s.subTitle)} style={{ fontSize: '16px' }}>
-            Баланс:
-          </h4>
+          <h4 className={clsx(s.subTitle)}>Баланс:</h4>
           <div className={s.actionsContainer}>
-            <h4 className={s.userDataText}>{userInfo.currentBudget}</h4>
+            <p className={s.userDataText}>{userInfo.currentBudget}</p>
             <button className={clsx('button', s.tabButton)}>Поповнити</button>
             <button className={clsx('button', s.tabButton)}>Вивести</button>
           </div>
-          <h4 className={clsx(s.subTitle)} style={{ fontSize: '16px' }}>
-            Комісія: 15%
-          </h4>
+          <p className={clsx(s.subTitle)}>Комісія: 15%</p>
         </div>
-        <Divider style={{ width: '250px' }} />
+        <Divider className={s.divider} />
         <button className={clsx('button', s.detailedInformationBtn)}>
           Детальна статистика переглядів
         </button>

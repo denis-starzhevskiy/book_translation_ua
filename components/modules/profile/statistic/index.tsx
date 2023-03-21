@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import s from './Statistic.module.scss';
 import { BreadCrumbs } from '@/components/elements/BreadCrumbs/BreadCrumbs';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 type StatisticProps = {
   statistic?: {
@@ -14,6 +15,8 @@ type StatisticProps = {
 };
 
 const StatisticView = ({ statistic: receivedStatistic }: StatisticProps) => {
+  const isMobile = useMediaQuery('900');
+
   const statistic = receivedStatistic || {
     views: 4324,
     income: 3543.5,
@@ -41,7 +44,7 @@ const StatisticView = ({ statistic: receivedStatistic }: StatisticProps) => {
               <h4>Дохід</h4>
               <h4>Купили</h4>
               <h4>Лайків</h4>
-              <h4>В закладах</h4>
+              <h4>{!isMobile ? 'В закладах' : 'Заклади'}</h4>
             </span>
           </div>
           <div style={{ display: 'flex' }}>

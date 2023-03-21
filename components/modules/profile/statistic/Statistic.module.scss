@@ -37,6 +37,11 @@
 
 .rowGaps {
   margin: 50px 0;
+
+  @media (max-width: 900px) {
+    text-align: center;
+    font-size: 17px;
+  }
 }
 
 .statisticContainer {

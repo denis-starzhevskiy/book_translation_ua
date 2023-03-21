@@ -20,13 +20,19 @@
   row-gap: 30px;
 
   @media (max-width: 900px) {
-
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .sectionTitle {
   @include text;
   color: #A5ACBD;
+
+  @media (max-width: 900px) {
+    text-align: center;
+    font-size: 17px;
+  }
 }
 
 .checkBoxOptionsContainer {
@@ -39,6 +45,17 @@
   margin: 30px 0;
   row-gap: 20px;
   width: 80%;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.adaptiveInout {
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 }
 
 .submitButton {
@@ -50,6 +67,16 @@
 .subSectionText {
  @include text;
   margin: 20px 0;
+  @media (max-width: 900px) {
+    text-align: center;
+  }
+}
+
+.sliderContainer {
+  @media(max-width: 900px) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .colorPickersContainer {

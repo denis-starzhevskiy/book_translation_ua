@@ -6,11 +6,13 @@ import { downloadCloudIcon, pictureDownloadIcon } from '@/components/modules/ico
 import CheckOption from '@/components/elements/CheckOption/CheckOption';
 import Select from '@/components/elements/Select';
 import CheckBox from '@/components/elements/CheckBox/CheckBox';
+import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 const GeneralInformation = () => {
   const [ageLimit, setAgeLimit] = useState<boolean>();
   const [file, setFile] = useState<File>();
   const [files, setFiles] = useState<object>();
+  const isMobile = useMediaQuery('900');
 
   const setFileByIdx = ({ idx, inputFile }: { idx: number; inputFile: any }) => {
     const file = inputFile.target.files[0];
@@ -250,17 +252,19 @@ const GeneralInformation = () => {
                   />
                 </label>
               </div>
-              <div style={{ cursor: 'pointer' }}>
-                <label className={s.labelSaveImg}>
-                  <h3 className={clsx('button', s.uploadFileText)}>{pictureDownloadIcon()}</h3>
-                  <input
-                    accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
-                    type="file"
-                    id="file1"
-                    onChange={saveImg}
-                  />
-                </label>
-              </div>
+              {!isMobile && (
+                <div style={{ cursor: 'pointer' }}>
+                  <label className={s.labelSaveImg}>
+                    <h3 className={clsx('button', s.uploadFileText)}>{pictureDownloadIcon()}</h3>
+                    <input
+                      accept=".svg, .png, .bmp, .gif, .jpg, .gif, .jpeg"
+                      type="file"
+                      id="file1"
+                      onChange={saveImg}
+                    />
+                  </label>
+                </div>
+              )}
             </div>
           </td>
         </tr>

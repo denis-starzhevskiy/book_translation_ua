@@ -40,7 +40,7 @@ const Index = () => {
               s.userDataText
             }>{`з ${userInfo.registrationDate} (${userInfo.daysExists} дні)`}</h4>
         </div>
-        <Divider style={{ width: '250px' }} />
+        <Divider className={s.divider} />
         <div className={s.shortStatsContainer}>
           <h4 className={clsx(s.subTitle)}>Перекладів</h4>
           <h4 className={clsx(s.subTitle)}>Сторінок переведено</h4>
@@ -51,7 +51,7 @@ const Index = () => {
           <h4 className={s.userDataText}>{userInfo.symbolsTranslatedNumber}</h4>
           <h4 className={s.userDataText}>{userInfo.commentsNumber}</h4>
         </div>
-        <Divider style={{ width: '250px' }} />
+        <Divider className={s.divider} />
       </div>
     </section>
   );
