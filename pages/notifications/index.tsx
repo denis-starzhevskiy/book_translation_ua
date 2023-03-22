@@ -85,6 +85,11 @@ const RightSide = () => {
         open={openMobileFiltersModal}
         onClose={() => setOpenMobileFiltersModal(false)}
       />
+      <Button
+        className={clsx(s.mobileFiltersButton, 'fontsize14')}
+        onClick={() => setOpenMobileFiltersModal(true)}>
+        Фільтри
+      </Button>
       <div className={s.section}>
         <div className={clsx('color-light-grey', 'fontsize14')}>Показано 4 сповіщення</div>
         <div className={s.sortContainer}>
@@ -106,11 +111,6 @@ const RightSide = () => {
           />
         </div>
       </div>
-      <Button
-        className={clsx(s.mobileFiltersButton, 'fontsize14')}
-        onClick={() => setOpenMobileFiltersModal(true)}>
-        Фільтри
-      </Button>
       <Divider style={{ marginBottom: 40, marginTop: 30 }} />
       <div>
         {new Array(4).fill(0).map((_, index) => (

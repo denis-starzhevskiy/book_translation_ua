@@ -113,7 +113,7 @@ const GeneralInformation = () => {
             Опис/рецензія
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>
-            <textarea name="textarea" className={'textArea'}></textarea>
+            <textarea name="textarea" className={clsx('textArea', s.textarea)}></textarea>
           </td>
         </tr>
         <tr className={s.bottomBorder}>

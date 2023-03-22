@@ -1,11 +1,3 @@
-@mixin text {
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
-}
-
 .section {
   min-height: 800px;
   padding: 0 0 20px 0;
@@ -15,7 +7,6 @@
 }
 
 .title {
-
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -24,15 +15,11 @@
 
   text-transform: uppercase;
 
-  color: #FFFFFF;
+  color: #ffffff;
 
   @media (max-width: 991.98px) {
     text-align: center;
   }
-}
-
-.subTitle {
-  @include text;
 }
 
 .rowGaps {
@@ -44,65 +31,57 @@
   }
 }
 
-.statisticContainer {
-  //padding: 30px 0;
-}
-
-.emptyHeader {
-  height: 35px;
-  width: 124px;
-  border-right: 1px solid var(--color-dark);
-  border-bottom: 1px solid var(--color-dark);
-
-  @media (max-width: 991.98px) {
-    display: none;
+.table {
+  width: 925px;
+  border-collapse: collapse;
+  @media (max-width: 925px) {
+    width: 100%;
   }
-}
-
-.generalHeader {
-  height: 45px;
-  width: 124px;
-  border-right: 1px solid var(--color-dark);
-  display: flex;
-  align-items: flex-end;
-  justify-content: start;
-
-  @media (max-width: 991.98px) {
-    display: none;
+  tr:first-child {
+    & > th {
+      padding: 12px 0 12px;
+    }
+    & > th:first-child {
+      border-right: 1px solid var(--color-dark);
+      border-bottom: 1px solid var(--color-dark);
+      width: 125px;
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
   }
-}
-
-.characteristicGridTemplate {
-  display: grid;
-  grid-template-columns: 4fr 4fr 4fr 4fr 4fr;
-  align-items: center;
-  width: 800px;
-  padding: 5px 0;
-
-  h4 {
-    text-align: center;
-
-    font-style: normal;
+  th {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    color: #ffffff;
   }
-
-  h3 {
+  tr:nth-child(2) > th:first-child {
+    border-right: 1px solid var(--color-dark);
+    text-align: left;
+    padding: 0;
+    padding-top: 20px;
+    padding-right: 67px;
+    width: 125px;
+    @media (max-width: 600px) {
+      display: none;
+    }
+  }
+  td {
+    padding: 0;
+    padding-top: 10px;
     text-align: center;
-
-    font-style: normal;
+    border-top: 1px solid var(--color-dark);
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
-    color: #96989D;
-
-    @media (max-width: 991.98px) {
-      font-size: 20px;
+    color: #96989d;
+    @media (max-width: 900px) {
+      font-size: 24px;
+    }
+    @media (max-width: 600px) {
+      padding: 0;
+      font-size: 16px;
     }
   }
-}
-
-.borderBottom {
-  border-bottom: 1px solid var(--color-dark);
 }

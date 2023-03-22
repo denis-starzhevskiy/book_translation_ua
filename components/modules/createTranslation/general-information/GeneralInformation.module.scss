@@ -32,7 +32,7 @@
   }
 
   @media (max-width: 600px) {
-    text-align: center;
+    text-align: left;
     font-size: 14px;
   }
 }
@@ -47,10 +47,19 @@
     justify-content: center;
     width: calc(100% - 2.5rem);
   }
+  .textarea {
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+  }
 }
 
 .commonTdTh {
   padding: 20px 0;
+  @media (max-width: 600px) {
+    padding: 5px 0;
+    width: 100%;
+  }
 }
 
 .bottomBorder {
@@ -75,6 +84,9 @@
 
 .tagsContainer {
   width: 80%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
 
 .tag {
@@ -97,6 +109,11 @@
   row-gap: 30px;
   align-items: flex-start;
   margin-bottom: 20px;
+  @media (max-width: 600px) {
+    padding: 5px 0;
+    width: 100%;
+    row-gap: 10px;
+  }
 }
 
 .actionContainer {
@@ -106,18 +123,18 @@
   @media (max-width: 991.98px) {
     width: 100%;
     justify-content: center;
-  };
+  }
 
   align-items: center;
 
   input {
     display: none;
-  };
+  }
 
   img {
     cursor: pointer;
     margin-left: 5px;
-  };
+  }
 }
 
 .labelSaveImg {
@@ -127,8 +144,8 @@
 }
 
 .uploadFileText {
-  background-color: #282D3B;
-  border-color: #282D3B;
+  background-color: #282d3b;
+  border-color: #282d3b;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -138,7 +155,9 @@
 
 .customSelect {
   width: 80%;
-
+  @media (max-width: 600px) {
+    width: 100%;
+  }
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -146,9 +165,12 @@
   display: flex;
   align-items: center;
 
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
-.customInput:not([type=checkbox]) {
-  width: 80%
+.customInput:not([type='checkbox']) {
+  width: 80%;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 }
