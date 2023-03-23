@@ -90,7 +90,7 @@ const RightSide = () => {
                 s.letterContainer,
                 selectedLetters.includes(index.toString()) && s.selectedRow
               )}>
-              <div>
+              <div className={s.checkboxContainer}>
                 <Checkbox
                   onChange={(event) => {
                     if (event.target.checked) {
@@ -110,7 +110,7 @@ const RightSide = () => {
                 для професійних мов любительських перекладів будь-яких новелів, фанфіків, ранобе з
                 різних мов.
               </div>
-              <div>
+              <div className={s.trashButtonContainer}>
                 <Button>
                   <Image src={trashIcon} alt="delete letter" />
                 </Button>
