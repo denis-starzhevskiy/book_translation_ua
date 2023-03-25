@@ -50,6 +50,11 @@
   font-size: 14px;
   line-height: 17px;
   color: var(--color-light_grey);
+  cursor: pointer;
+}
+
+.replyInput::placeholder {
+  color: var(--color-light_grey);
 }
 
 .textItalic {

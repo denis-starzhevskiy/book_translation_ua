@@ -67,7 +67,7 @@ const CreateTranslation = () => {
                 { title: 'Перегляд книги', link: '/books/543543' },
               ]}
             />
-            <h2 className={s.title}>СТВОРИТИ ПЕРЕКЛАД</h2>
+            <h2 className={s.title}>СТВОРЕННЯ ПЕРЕКЛАДУ</h2>
             <div id="navigation-block" className={s.navContainer}>
               <div className={s.navigation}>
                 <nav aria-label="Navigation">

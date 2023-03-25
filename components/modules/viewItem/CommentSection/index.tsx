@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
 import Image from 'next/image';
 
@@ -22,6 +22,34 @@ type Props = {
   light?: boolean;
 };
 
+function CommentItem(props: { item: CommentProps }) {
+  const [replyOpen, setReplyOpen] = useState(false);
+
+  return (
+    <div className={s.itemContainer}>
+      <div>
+        <Image src={avatar} alt={''} />
+      </div>
+      <div className={s.textContainer}>
+        <div className={s.usernameLastSeenContainer}>
+          <p className={s.usernameTextDecoration}>{props.item.username}</p>
+          <p className={clsx(s.greyTextDecoration, s.textItalic)}>{props.item.publicationData}</p>
+        </div>
+        <p className={s.commentTextDecoration}>{props.item.comment}</p>
+        <div className={s.likeActionContainer}>
+          <p className={s.greyTextDecoration} onClick={() => setReplyOpen((prev) => !prev)}>
+            Відповісти
+          </p>
+          {heartIcon()}
+        </div>
+        {replyOpen && (
+          <input className={clsx('input', s.replyInput)} placeholder={'Введіть відповідь'} />
+        )}
+      </div>
+    </div>
+  );
+}
+
 const CommentsSection = ({ items, light }: Props) => {
   return (
     <section className={clsx(s.section, 'section')}>
@@ -29,26 +57,7 @@ const CommentsSection = ({ items, light }: Props) => {
         <div className={s.wrapper}>
           <h2 className={clsx(s.title, 'title-section')}>Коментарі</h2>
           {items.map((item, idx) => {
-            return (
-              <div key={idx} className={s.itemContainer}>
-                <div>
-                  <Image src={avatar} alt={''} />
-                </div>
-                <div className={s.textContainer}>
-                  <div className={s.usernameLastSeenContainer}>
-                    <p className={s.usernameTextDecoration}>{item.username}</p>
-                    <p className={clsx(s.greyTextDecoration, s.textItalic)}>
-                      {item.publicationData}
-                    </p>
-                  </div>
-                  <p className={s.commentTextDecoration}>{item.comment}</p>
-                  <div className={s.likeActionContainer}>
-                    <p className={s.greyTextDecoration}>Сподобався коментар?</p>
-                    {heartIcon()}
-                  </div>
-                </div>
-              </div>
-            );
+            return <CommentItem key={idx} item={item} />;
           })}
         </div>
       </div>

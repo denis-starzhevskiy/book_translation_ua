@@ -32,43 +32,6 @@
   @media (max-width: 400px) {
     grid-template-columns: 0.8fr 1.3fr 4fr 2fr;
   }
-
-  //&.light {
-  //  &::before {
-  //    background: linear-gradient(90deg, rgba(40, 45, 59, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  //  }
-  //  &::after {
-  //    background: linear-gradient(-90deg, rgba(40, 45, 59, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  //  }
-  //}
-  //&::before {
-  //  pointer-events: none;
-  //  position: absolute;
-  //  content: '';
-  //  z-index: 2;
-  //
-  //  top: 0;
-  //  left: -0.9375rem;
-  //  height: 100%;
-  //  width: 1.875rem;
-  //  background: linear-gradient(90deg, rgba(26, 30, 41, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  //}
-  //&::after {
-  //  pointer-events: none;
-  //  position: absolute;
-  //  content: '';
-  //  z-index: 2;
-  //
-  //  top: 0;
-  //  right: -0.9375rem;
-  //  height: 100%;
-  //  width: 1.875rem;
-  //  background: linear-gradient(-90deg, rgba(26, 30, 41, 1) 0%, rgba(255, 255, 255, 0) 100%);
-  //
-  //  @media (max-width: 991.98px) {
-  //    display: none;
-  //  }
-  //}
 }
 
 .rowItemContainer {
@@ -177,6 +140,18 @@
     flex-direction: column;
     row-gap: 20px;
   }
+}
+
+.costLabel {
+  padding-left: 15px;
+  @media (max-width: 900px) {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+.nameLabel {
+  padding-left: 10px;
 }
 
 .downloadButtonsContainer {

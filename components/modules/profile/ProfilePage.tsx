@@ -47,15 +47,12 @@ const ProfilePage = () => {
         <h4 className={clsx(s.mainTitle)}>Статистика</h4>
         <div className={s.dateExistsStatsContainer}>
           <h4 className={clsx(s.subTitle)}>Разом з нами:</h4>
-          <p
-            className={
-              s.userDataText
-            }>{`з ${userInfo.registrationDate} (${userInfo.daysExists} дні)`}</p>
+          <p className={s.userDataText}>{`з ${userInfo.registrationDate}`}</p>
         </div>
         <Divider className={s.divider} />
         <div className={s.shortStatsContainer}>
           <p className={clsx(s.subTitle)}>Перекладів</p>
-          <p className={clsx(s.subTitle)}>Сторінок переведено</p>
+          <p className={clsx(s.subTitle)}>Сторінок переклав</p>
           <p className={clsx(s.subTitle)}>Символів переклав</p>
           <p className={clsx(s.subTitle)}>Прокоментував</p>
           <p className={s.userDataText}>{userInfo.translationNumber}</p>

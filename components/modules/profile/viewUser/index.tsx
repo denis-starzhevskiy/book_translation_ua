@@ -35,15 +35,12 @@ const Index = () => {
           <h4 className={clsx(s.subTitle)} style={{ fontSize: '16px' }}>
             Разом з нами:
           </h4>
-          <h4
-            className={
-              s.userDataText
-            }>{`з ${userInfo.registrationDate} (${userInfo.daysExists} дні)`}</h4>
+          <h4 className={s.userDataText}>{`з ${userInfo.registrationDate}`}</h4>
         </div>
         <Divider className={s.divider} />
         <div className={s.shortStatsContainer}>
           <h4 className={clsx(s.subTitle)}>Перекладів</h4>
-          <h4 className={clsx(s.subTitle)}>Сторінок переведено</h4>
+          <h4 className={clsx(s.subTitle)}>Сторінок переклав</h4>
           <h4 className={clsx(s.subTitle)}>Символів переклав</h4>
           <h4 className={clsx(s.subTitle)}>Прокоментував</h4>
           <h4 className={s.userDataText}>{userInfo.translationNumber}</h4>

@@ -32,22 +32,16 @@ const TranslatorsView = ({ translators }: TranslatorsProps) => {
         <h2 className={s.title}>ПЕРЕКЛАДАЧІ</h2>
         <div className={s.translatorsTableContainer}></div>
         <div className={s.headerContainer}>
-          <div className={s.subText}>Показано 36 робіт</div>
+          <div className={s.subText}>Показано 36 перекладачів</div>
           <div style={{ display: 'flex', gap: 15, alignItems: 'center' }}>
             <div className={s.subText}>Сортувати за</div>
             <Select
-              value={'назвою'}
+              value={'місце в рейтингу'}
               options={[
-                'назвою',
-                'датою створення',
-                'датою оновлення',
-                'рейтингами',
-                'переглядами',
-                'кількістю лайків',
-                'кількістю безкоштовних сторінок',
-                'кількістю сторінок',
-                'кількістю розділів',
-                'кількістю в закладках',
+                'місце в рейтингу',
+                'кількість книг',
+                'кількість коментарів',
+                'останнє відвідування',
               ].map((value) => ({ label: value, value }))}
               customClass={s.customSelect}
             />

@@ -27,7 +27,7 @@ const ProposalsSection = ({ items, light }: Props) => {
         <div className={clsx(s.content, light && s.light)}>
           <div className={clsx(s.rowContainer, s.marginBottom20)}>
             <div />
-            <p className={s.tableHeaders}>Вартість</p>
+            <p className={s.tableHeaders}>Вартість (UAcoins)</p>
             <p className={s.tableHeaders}>Назва</p>
             <p className={clsx(s.tableHeaders, s.activeBlock)}>Актив</p>
             <div />
@@ -40,8 +40,8 @@ const ProposalsSection = ({ items, light }: Props) => {
                     <input type={'checkbox'} />
                     <span className={s.checkmark}></span>
                   </label>
-                  <p>{`${item.cost} $`}</p>
-                  <p>{item.name}</p>
+                  <p className={s.costLabel}>{`${item.cost}`}</p>
+                  <p className={s.nameLabel}>{item.name}</p>
                   <p className={s.activeBlock}>{item.active}</p>
                   <div className={s.buttonContainer}>
                     <button className={clsx('button', s.outlinedButton)}>{bookIcon()}Читати</button>
@@ -52,7 +52,7 @@ const ProposalsSection = ({ items, light }: Props) => {
             );
           })}
           <div className={s.actionContainer}>
-            <button className={'button'}>{noticeIcon()}Підписка</button>
+            <button className={'button'}>{noticeIcon()}Купити 5 розділів за 45</button>
             <div className={s.downloadButtonsContainer}>
               <button className={'button'}>{downloadIcon()}.fb2</button>
               <button className={'button'}>{downloadIcon()}.docx</button>

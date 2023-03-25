@@ -35,9 +35,6 @@ const settingOptions = [
     title: 'Зняття розділу з передплати',
   },
   {
-    title: 'Коментар до глави',
-  },
-  {
     title:
       'Я підтверджую, що мені виповнилося 18 років, і я можу переглядати контент, призначений для дорослих',
   },
@@ -81,7 +78,7 @@ const SettingsView = () => {
             <div></div>
             <div className={s.colorPickersContainer}>
               <h5 className={s.subSectionText}>Колір тексту</h5>
-              <h5 className={s.subSectionText}>Колір тіла</h5>
+              <h5 className={s.subSectionText}>Колір тла</h5>
               <ColorPicker />
               <ColorPicker />
             </div>
