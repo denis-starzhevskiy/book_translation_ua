@@ -111,14 +111,14 @@ const Statistics = () => {
         <div className={clsx('color-white', s.categoryName)}>Перекладів</div>
         <div className={clsx('color-dark', s.number)}>54</div>
         <Divider className={s.my20} />
-        <div className={clsx('color-white', s.categoryName)}>Сторінок переведено</div>
+        <div className={clsx('color-white', s.categoryName)}>Сторінок переклав</div>
         <div className={clsx('color-dark', s.number)}>658</div>
         <Divider className={s.my20} />
         <div className={clsx('color-white', s.categoryName)}>Символів переклав</div>
         <div className={clsx('color-dark', s.number)}>5988</div>
         <Divider className={s.my20} />
         <div className={s.commission}>
-          <div className={s.commissionNumber}>10%</div>
+          <div className={s.commissionNumber}>15%</div>
           <div className={'color-white'}>Комісія</div>
         </div>
       </div>

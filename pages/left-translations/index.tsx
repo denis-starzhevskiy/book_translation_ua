@@ -74,13 +74,7 @@ const LeftSide = () => {
       <div className={s.booksList}>
         {catalogData.map((item) => (
           <div key={item.id} className={s.booksListItem}>
-            <Book
-              id={item.id}
-              title={item.title}
-              link={item.link}
-              image={item.image}
-              status={item.status}
-            />
+            <Book id={item.id} title={item.title} link={item.link} image={item.image} />
           </div>
         ))}
       </div>
