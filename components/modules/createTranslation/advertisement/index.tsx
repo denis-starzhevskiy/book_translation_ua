@@ -66,8 +66,8 @@ const AdvertisementComponent = ({ advertisement, key }: AdvertisementComponentPr
               Оберіть жанр
             </label>
             <Select
-              value={'Англійська'}
-              options={['Англійська', 'Українська'].map((value) => ({ label: value, value }))}
+              value={'Триллер'}
+              options={['Триллер', 'Фантастика'].map((value) => ({ label: value, value }))}
               customClass={s.customSelect}
             />
           </div>

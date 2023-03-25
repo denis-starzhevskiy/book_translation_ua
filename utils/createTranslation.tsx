@@ -29,7 +29,7 @@ export const advertisements = [
     isGenre: true,
   },
   {
-    name: 'Реклама на головній (15UAcoins/день)',
+    name: 'Реклама в Рекомендаціях',
     subTitle: 'в каруселі «Реклама» на головній сторінці, максимум 1 книга на день',
     priceInCoins: 45,
     isGenre: true,
