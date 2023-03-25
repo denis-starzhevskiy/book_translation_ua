@@ -8,6 +8,7 @@ import Menu from '@/components/elements/Menu';
 import Checkbox from '@/components/elements/CheckBox/CheckBox';
 import clsx from 'clsx';
 import trashIcon from '../../public/images/trash.svg';
+import replyIcon from '../../public/images/reply.svg';
 import expandLeftIcon from '../../public/images/expandLeft.svg';
 import expandRightIcon from '../../public/images/expandRight.svg';
 import Image from 'next/image';
@@ -110,9 +111,12 @@ const RightSide = () => {
                 для професійних мов любительських перекладів будь-яких новелів, фанфіків, ранобе з
                 різних мов.
               </div>
-              <div className={s.trashButtonContainer}>
+              <div className={s.actionsContainer}>
                 <Button>
                   <Image src={trashIcon} alt="delete letter" />
+                </Button>
+                <Button>
+                  <Image src={replyIcon} alt="send letter" />
                 </Button>
               </div>
             </div>
