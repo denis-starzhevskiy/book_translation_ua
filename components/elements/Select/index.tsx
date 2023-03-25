@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import s from './Select.module.scss';
 import expandIcon from '../../../public/images/expandDownIcon.svg';
 import Image from 'next/image';
@@ -20,7 +20,13 @@ type SelectProps = {
 const Select: React.FC<SelectProps> = ({ value: valueProp, onChange, options, customClass }) => {
   const [anchorEl, setAnchorEl] = React.useState<HTMLDivElement | null>(null);
   const selectContainerRef = useRef<HTMLDivElement>(null);
-  const [value, setValue] = useState(valueProp);
+  const [value, setValue] = useState(
+    options.filter((option) => option.value === valueProp).length > 0 ? valueProp : ''
+  );
+
+  useEffect(() => {
+    setValue(options.filter((option) => option.value === valueProp).length > 0 ? valueProp : '');
+  }, [valueProp]);
 
   const open = Boolean(anchorEl);
 

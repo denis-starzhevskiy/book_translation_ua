@@ -18,7 +18,7 @@ export default function CatalogPage() {
       <div className={s.mainContainer}>
         <h4 className={clsx('color-white', s.title)}>Як користуватись сайтом</h4>
         <p className={clsx('color-white', s.paragraph)}>
-          Вітання. Добро пожалувати в систему перекладів «UA Translate». Цей сайт призначений для
+          Ласкаво просимо в систему перекладів «UA Translate». Цей сайт призначений для
           професійних мов любительських перекладів будь-яких новелів, фанфіків, ранобе з різних мов.
           Ваші улюблені ранобе, новели та інше на українській мові!
         </p>

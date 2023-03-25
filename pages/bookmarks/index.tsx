@@ -17,7 +17,7 @@ export default function BookmarksPage() {
       <BreadCrumbs
         path={[
           { title: 'Головна', link: '/' },
-          { title: 'Головна книги', link: '/' },
+          { title: 'Закладки', link: '/' },
         ]}
       />
       <PageTitle title="Закладки" />

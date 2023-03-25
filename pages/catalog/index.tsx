@@ -20,7 +20,7 @@ export default function CatalogPage() {
       <BreadCrumbs
         path={[
           { title: 'Головна', link: '/' },
-          { title: 'Головна книги', link: '/' },
+          { title: 'Каталог', link: '/' },
         ]}
       />
       <PageTitle title="Каталог" />
@@ -39,7 +39,7 @@ const LeftSide = () => {
         onClose={() => setOpenMobileFiltersModal(false)}
       />
       <Search
-        placeholder={'Пошук по покинутим перекладам'}
+        placeholder={'Пошук по каталогу'}
         icon={'search'}
         className={s.searchInputContainer}
       />

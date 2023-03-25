@@ -12,6 +12,7 @@ import { saveDataIcon } from '@/components/modules/icons';
 import Modal from '@/components/elements/Modal';
 import Image from 'next/image';
 import closeIcon from '@/public/images/closeIcon.svg';
+import trashIcon from '@/public/images/trash.svg';
 
 export default function CatalogPage() {
   return (
@@ -37,7 +38,6 @@ const Filters = () => {
     'Вихід нових розділів',
     'Новий розділ у перекладі',
     'Зміна статусу перекладу',
-    'Зняття розділу з передплати',
     'Коментар до глави',
     'Коментар до книги',
   ];
@@ -95,19 +95,11 @@ const RightSide = () => {
         <div className={s.sortContainer}>
           <div className={clsx('color-light-grey', 'fontsize14')}>Показати сповіщення</div>
           <Select
-            value={'назвою'}
-            options={[
-              'назвою',
-              'датою створення',
-              'датою оновлення',
-              'рейтингами',
-              'переглядами',
-              'кількістю лайків',
-              'кількістю безкоштовних сторінок',
-              'кількістю сторінок',
-              'кількістю розділів',
-              'кількістю в закладках',
-            ].map((value) => ({ label: value, value }))}
+            customClass={s.sortSelect}
+            value={'Всі'}
+            options={['Всі', 'Важливі', 'Непрочитані', 'Прочитані', 'За 1 день', 'За 7 днів'].map(
+              (value) => ({ label: value, value })
+            )}
           />
         </div>
       </div>
@@ -125,6 +117,10 @@ const RightSide = () => {
           </div>
         ))}
       </div>
+      <Button>
+        <Image src={trashIcon} alt="delete selected letters" />
+        Видалити всі
+      </Button>
     </div>
   );
 };
