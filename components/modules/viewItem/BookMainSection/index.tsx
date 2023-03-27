@@ -21,7 +21,7 @@ export type BookProps = {
   translator?: string;
   sectionsNumber?: number;
   genre?: string;
-  status?: string;
+  status: string;
   fendom?: string;
   tags?: {
     link: string;

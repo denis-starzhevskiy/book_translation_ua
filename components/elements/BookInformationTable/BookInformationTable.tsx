@@ -3,6 +3,7 @@ import s from './BookInformationTable.module.scss';
 import clsx from 'clsx';
 import Link from 'next/link';
 import { BookProps } from '@/components/modules/viewItem/BookMainSection';
+import { getStatusLabel } from '@/utils/helpers';
 
 const BookInformationTable = (book: BookProps) => {
   return (
@@ -49,6 +50,12 @@ const BookInformationTable = (book: BookProps) => {
               </div>
             )}
           </td>
+        </tr>
+        <tr>
+          <th className={clsx(s.th, s.commonTdTh)} scope={'row'}>
+            Статус
+          </th>
+          <td className={clsx(s.td, s.commonTdTh)}>{getStatusLabel(book.status)}</td>
         </tr>
         <tr>
           <th className={clsx(s.th, s.commonTdTh)} scope={'row'}>
