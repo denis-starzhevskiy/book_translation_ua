@@ -1,7 +1,7 @@
 export const getStatusLabel = (status: string) => {
   switch (status) {
     case 'new':
-      return 'Новий';
+      return 'Випуск';
     case 'in progress':
       return 'Переводиться';
     case 'output':
