@@ -29,6 +29,12 @@ const BookInformationTable = (book: BookProps) => {
         </tr>
         <tr>
           <th className={clsx(s.th, s.commonTdTh)} scope={'row'}>
+            Статус
+          </th>
+          <td className={clsx(s.td, s.commonTdTh)}>{getStatusLabel(book.status)}</td>
+        </tr>
+        <tr>
+          <th className={clsx(s.th, s.commonTdTh)} scope={'row'}>
             Жанр
           </th>
           <td className={clsx(s.td, s.commonTdTh)}>{book.genre}</td>
@@ -50,12 +56,6 @@ const BookInformationTable = (book: BookProps) => {
               </div>
             )}
           </td>
-        </tr>
-        <tr>
-          <th className={clsx(s.th, s.commonTdTh)} scope={'row'}>
-            Статус
-          </th>
-          <td className={clsx(s.td, s.commonTdTh)}>{getStatusLabel(book.status)}</td>
         </tr>
         <tr>
           <th className={clsx(s.th, s.commonTdTh)} scope={'row'}>
